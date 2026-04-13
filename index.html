@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drinks Designers | Bar Consultancy &amp; Event Bar Catering London</title>
+<meta name="description" content="London's premium bar consultancy and event bar catering studio. Bespoke cocktail menus, mobile bars, staff training and beverage programs across the UK.">
+<link rel="canonical" href="https://drinksdesigners.com/">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#7a5c1e;--gold-lt:#9a7830;--gold-text:#8c6d2f;--gold-bright:#c8a850;
+  --bg:#f5f3ee;--bg2:#eeecea;--white:#fff;
+  --dark:#1a1a14;--dark2:#111109;
+  --on-s:#1a1a14;--on-sv:#5a5040;--border:#ddd9d0;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;border-radius:0!important}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--on-s);font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+button{font-family:'Manrope',sans-serif;cursor:pointer;border:none;background:none}
+ul{list-style:none}
+img{display:block}
+
+/* ══ LOGO ════════════════════════════════════ */
+.logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-emblem{width:40px;height:40px;flex-shrink:0}
+.logo-emblem svg{width:40px;height:40px;overflow:visible}
+.logo-ring-outer{transition:transform .9s cubic-bezier(.25,.46,.45,.94);transform-origin:20px 20px}
+.logo-wrap:hover .logo-ring-outer{transform:rotate(22.5deg)}
+.logo-spokes-g{animation:spokeSpin 22s linear infinite;transform-origin:20px 20px}
+.logo-wrap:hover .logo-spokes-g{animation-duration:6s}
+@keyframes spokeSpin{to{transform:rotate(360deg)}}
+.logo-text{display:flex;flex-direction:column;gap:2px}
+.logo-name{font-family:'Noto Serif',serif;font-size:13.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--on-s);line-height:1;transition:letter-spacing .4s}
+.logo-wrap:hover .logo-name{letter-spacing:.3em}
+.logo-sub{font-size:7.5px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-text);line-height:1}
+
+/* ══ NAV ═════════════════════════════════════ */
+nav{position:fixed;top:0;left:0;right:0;z-index:600;height:60px;padding:0 52px;display:flex;align-items:center;justify-content:space-between;background:rgba(245,243,238,.96);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.07);transition:box-shadow .4s}
+nav.scrolled{box-shadow:0 2px 32px rgba(0,0,0,.07)}
+.nav-links{display:flex;gap:36px}
+.nav-links a{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--on-sv);transition:color .25s;position:relative}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:-3px;width:0;height:1px;background:var(--gold);transition:width .3s}
+.nav-links a:hover{color:var(--on-s)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#fff;padding:11px 28px;background:var(--gold);transition:background .25s,transform .2s,box-shadow .25s;display:inline-block}
+.nav-cta:hover{background:var(--gold-lt);transform:translateY(-1px);box-shadow:0 6px 20px rgba(122,92,30,.3)}
+.nav-cta:active{transform:translateY(0)}
+.nav-ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nav-ham span{display:block;width:20px;height:1.5px;background:var(--on-s)}
+#mMenu{display:none;position:fixed;top:60px;left:0;right:0;z-index:590;background:rgba(245,243,238,.98);backdrop-filter:blur(20px);padding:28px;border-bottom:1px solid var(--border)}
+#mMenu ul{display:flex;flex-direction:column;gap:22px}
+#mMenu a{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--on-s)}
+#mMenu .m-cta{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#fff;padding:13px 26px;background:var(--gold);margin-top:8px}
+
+/* ══ SHARED ══════════════════════════════════ */
+.eb{display:inline-flex;align-items:center;gap:12px;font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-text)}
+.eb::before{content:'';width:20px;height:1px;background:currentColor;flex-shrink:0}
+.btn-gold{font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#fff;padding:14px 30px;background:var(--gold);display:inline-block;transition:background .25s,transform .2s,box-shadow .25s}
+.btn-gold:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:0 8px 24px rgba(122,92,30,.35)}
+.btn-gold:active{transform:translateY(0)}
+.btn-ol{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.85);padding:13px 29px;border:1px solid rgba(255,255,255,.4);display:inline-block;transition:all .25s}
+.btn-ol:hover{border-color:rgba(255,255,255,.9);color:#fff;transform:translateY(-2px);background:rgba(255,255,255,.07)}
+.btn-ol:active{transform:translateY(0)}
+
+/* ══ HERO ════════════════════════════════════ */
+#hero{position:relative;height:100vh;min-height:640px;display:flex;align-items:flex-end;padding-bottom:80px;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%;transform:scale(1.05);animation:heroZoom 14s ease-out forwards}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(110deg,rgba(12,10,6,.84) 0%,rgba(12,10,6,.44) 52%,rgba(12,10,6,.08) 100%)}
+.hero-body{position:relative;z-index:2;padding:0 52px;max-width:620px}
+.hero-ey{font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:rgba(200,170,100,.85);display:flex;align-items:center;gap:12px;margin-bottom:28px;opacity:0;animation:fadeUp .8s .3s ease forwards}
+.hero-ey::before{content:'';width:20px;height:1px;background:rgba(200,170,100,.85)}
+h1{font-family:'Noto Serif',serif;font-size:clamp(44px,5.5vw,76px);font-weight:400;color:#fff;line-height:1.05;letter-spacing:-.01em;margin-bottom:24px;opacity:0;animation:fadeUp .9s .5s ease forwards}
+h1 em{font-style:italic;color:var(--gold-bright)}
+.hero-desc{font-size:15px;color:rgba(255,255,255,.68);line-height:1.8;font-weight:300;margin-bottom:36px;max-width:430px;opacity:0;animation:fadeUp .9s .7s ease forwards}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;opacity:0;animation:fadeUp .9s .9s ease forwards}
+.hero-tags{position:absolute;bottom:32px;left:52px;z-index:2;display:flex;flex-wrap:wrap;gap:6px 20px}
+.hero-tag{font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.42);display:flex;align-items:center;gap:7px}
+.hero-tag::before{content:'';width:5px;height:5px;background:var(--gold);opacity:.7;flex-shrink:0}
+.hero-scroll{position:absolute;bottom:36px;right:52px;z-index:2;font-size:8px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.32);writing-mode:vertical-rl}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+/* ══ STATS BAR ═══════════════════════════════ */
+.stats-bar{background:var(--dark);display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-item{padding:28px 0;text-align:center;border-right:1px solid rgba(255,255,255,.06);transition:background .3s}
+.stat-item:last-child{border-right:none}
+.stat-item:hover{background:rgba(255,255,255,.03)}
+.stat-val{font-family:'Noto Serif',serif;font-size:22px;font-weight:400;color:var(--gold-bright);line-height:1;margin-bottom:5px;transition:transform .3s}
+.stat-item:hover .stat-val{transform:scale(1.08)}
+.stat-lbl{font-size:8px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.32)}
+
+/* ══ ABOUT ═══════════════════════════════════ */
+#about{display:grid;grid-template-columns:1fr 1fr}
+.about-img{position:relative;height:600px;overflow:hidden}
+.about-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.about-img:hover img{transform:scale(1.04)}
+.about-body{background:var(--bg);padding:80px 64px;display:flex;flex-direction:column;justify-content:center}
+.about-body h2{font-family:'Noto Serif',serif;font-size:clamp(26px,2.6vw,40px);font-weight:400;line-height:1.12;letter-spacing:-.015em;color:var(--on-s);margin:16px 0 20px}
+.about-body h2 em{font-style:italic}
+.about-body p{font-size:14px;color:var(--on-sv);line-height:1.85;font-weight:300;margin-bottom:14px;max-width:400px}
+.about-divider{width:100%;height:1px;background:var(--border);margin:32px 0}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.about-stat-val{font-family:'Noto Serif',serif;font-size:28px;font-weight:400;color:var(--on-s);line-height:1;margin-bottom:4px}
+.about-stat-lbl{font-size:8px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--on-sv);opacity:.6}
+.about-link{display:inline-flex;align-items:center;gap:10px;margin-top:28px;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--on-s);border-bottom:1px solid var(--on-s);padding-bottom:2px;transition:gap .35s,color .25s,border-color .25s}
+.about-link:hover{gap:18px;color:var(--gold);border-color:var(--gold)}
+.about-link::after{content:'\2192'}
+
+/* ══ CLIENTS TICKER ══════════════════════════ */
+.clients-wrap{background:var(--dark);overflow:hidden}
+.clients-label{text-align:center;padding:20px 0 10px;font-size:8px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.25)}
+.ticker-outer{overflow:hidden;padding:8px 0 20px}
+.ticker-track{display:flex;width:max-content;animation:tickerAnim 42s linear infinite}
+.ticker-track:hover{animation-play-state:paused}
+.ticker-item{display:flex;align-items:center;gap:18px;padding:0 28px;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);white-space:nowrap;transition:color .25s;cursor:default}
+.ticker-item:hover{color:rgba(200,168,80,.8)}
+.ticker-sep{width:4px;height:1px;background:rgba(200,168,80,.4);flex-shrink:0}
+@keyframes tickerAnim{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ══ SERVICES ════════════════════════════════ */
+#services{background:var(--dark);scroll-margin-top:60px}
+.svc-intro{padding:80px 52px 0;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+.svc-intro-h{font-family:'Noto Serif',serif;font-size:clamp(26px,3vw,42px);font-weight:400;color:#fff;line-height:1.12;margin:14px 0 0;letter-spacing:-.01em}
+.svc-intro-h em{font-style:italic}
+.svc-intro-right p{font-size:14px;color:rgba(255,255,255,.5);line-height:1.8;font-weight:300;max-width:420px;margin-bottom:28px}
+.svc-tab-btns{display:flex}
+.svc-tab-btn{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);padding:12px 22px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);cursor:pointer;transition:all .25s}
+.svc-tab-btn.active{background:var(--gold);color:#fff;border-color:var(--gold)}
+.svc-tab-btn:not(.active):hover{color:rgba(255,255,255,.85);background:rgba(255,255,255,.1);transform:translateY(-1px)}
+.svc-tabs-row{display:flex;margin:48px 52px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.svc-tab-link{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.38);padding:16px 28px;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .25s;background:none;border-top:none;border-left:none;border-right:none}
+.svc-tab-link.active{color:rgba(255,255,255,.85);border-bottom-color:var(--gold)}
+.svc-tab-link:hover:not(.active){color:rgba(255,255,255,.65)}
+.svc-panel{display:none;padding:0 52px}
+.svc-panel.active{display:block}
+.svc-panel-head{padding:52px 0 36px;border-bottom:1px solid rgba(255,255,255,.07)}
+.svc-panel-head h3{font-family:'Noto Serif',serif;font-size:clamp(17px,1.8vw,24px);font-weight:400;color:#fff;margin:0 0 10px}
+.svc-panel-head p{font-size:13px;color:rgba(255,255,255,.42);font-style:italic;line-height:1.7;max-width:680px}
+.svc-brief-btn{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.15);padding:10px 18px;cursor:pointer;transition:all .3s}
+.svc-brief-btn:hover{border-color:var(--gold);color:#fff;transform:translateX(4px)}
+.svc-brief-btn:active{transform:translateX(0)}
+
+/* service blocks */
+.svc-blocks{display:grid;grid-template-columns:1fr 1fr}
+.svc-block{padding:52px 0;border-bottom:1px solid rgba(255,255,255,.06);position:relative;overflow:hidden;transition:background .4s}
+.svc-block:hover{background:rgba(255,255,255,.022)}
+.svc-block:nth-child(odd){padding-right:52px}
+.svc-block:nth-child(even){padding-left:52px;border-left:1px solid rgba(255,255,255,.06)}
+.svc-ghost{position:absolute;right:16px;top:24px;font-family:'Noto Serif',serif;font-size:90px;font-weight:600;color:rgba(255,255,255,.025);line-height:1;pointer-events:none;user-select:none;transition:color .5s}
+.svc-block:hover .svc-ghost{color:rgba(200,168,80,.035)}
+.svc-num{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border:1px solid rgba(255,255,255,.15);font-size:10px;font-weight:700;color:rgba(255,255,255,.35);margin-bottom:20px;transition:border-color .3s,color .3s,transform .3s}
+.svc-block:hover .svc-num{border-color:rgba(200,168,80,.5);color:var(--gold-bright);transform:scale(1.06)}
+/* SVG service icon */
+.svc-icon{width:36px;height:36px;margin-bottom:16px;display:block;color:var(--gold-bright);opacity:.38;transition:opacity .4s,transform .4s}
+.svc-block:hover .svc-icon{opacity:.65;transform:scale(1.1) translateY(-2px)}
+.svc-eb{font-size:8px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-text);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.svc-eb::before{content:'';width:12px;height:1px;background:var(--gold-text)}
+.svc-block h4{font-family:'Noto Serif',serif;font-size:clamp(15px,1.5vw,21px);font-weight:400;color:#fff;margin-bottom:10px;line-height:1.2;transition:color .3s}
+.svc-block:hover h4{color:#f0e8d8}
+.svc-desc{font-size:13px;color:rgba(255,255,255,.38);font-style:italic;line-height:1.7;margin-bottom:18px}
+.svc-list{display:flex;flex-direction:column;gap:8px}
+.svc-list li{font-size:12px;color:rgba(255,255,255,.35);line-height:1.6;padding-left:16px;position:relative;font-weight:300}
+.svc-list li::before{content:'\2013';position:absolute;left:0;color:rgba(255,255,255,.18)}
+
+/* ══ WORK GALLERY ════════════════════════════ */
+#work{scroll-margin-top:60px}
+.work-gallery{display:grid;grid-template-columns:repeat(4,1fr);height:440px}
+.work-item{position:relative;overflow:hidden;cursor:pointer}
+.work-item img{width:100%;height:100%;object-fit:cover;transition:transform .75s cubic-bezier(.25,.46,.45,.94),filter .4s}
+.work-item:hover img{transform:scale(1.07);filter:brightness(.8)}
+.work-info{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,10,6,.88) 0%,rgba(12,10,6,.18) 45%,transparent 65%);display:flex;flex-direction:column;justify-content:flex-end;padding:24px 22px}
+.work-cat{font-size:8px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:5px;transform:translateY(5px);transition:transform .35s}
+.work-item:hover .work-cat{transform:translateY(0)}
+.work-title{font-family:'Noto Serif',serif;font-size:16px;font-weight:400;color:#fff;font-style:italic;transform:translateY(5px);transition:transform .35s .05s}
+.work-item:hover .work-title{transform:translateY(0)}
+
+/* ══ VIDEO SHOWCASE ══════════════════════════ */
+#showcase{background:var(--dark2);position:relative;overflow:hidden}
+.showcase-inner{display:grid;grid-template-columns:1fr 1fr;min-height:480px}
+.showcase-video-wrap{position:relative;overflow:hidden;background:#000}
+.showcase-video-wrap video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.showcase-video-wrap:hover video{transform:scale(1.02)}
+.showcase-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(12,10,6,.25);transition:background .3s;cursor:pointer}
+.showcase-play:hover{background:rgba(12,10,6,.1)}
+.showcase-play-btn{width:64px;height:64px;background:rgba(200,168,80,.15);border:1.5px solid rgba(200,168,80,.5);display:flex;align-items:center;justify-content:center;transition:all .3s;backdrop-filter:blur(8px)}
+.showcase-play:hover .showcase-play-btn{background:rgba(200,168,80,.3);border-color:rgba(200,168,80,.9);transform:scale(1.08)}
+.showcase-play-btn svg{width:22px;height:22px;color:rgba(200,168,80,.95);margin-left:3px}
+.showcase-body{padding:72px 64px;display:flex;flex-direction:column;justify-content:center}
+.showcase-body h2{font-family:'Noto Serif',serif;font-size:clamp(26px,2.6vw,38px);font-weight:400;color:#fff;line-height:1.12;margin:16px 0 20px}
+.showcase-body h2 em{font-style:italic}
+.showcase-body p{font-size:14px;color:rgba(255,255,255,.5);line-height:1.85;font-weight:300;max-width:380px;margin-bottom:32px}
+.showcase-link{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bright);border-bottom:1px solid rgba(200,168,80,.4);padding-bottom:2px;transition:gap .35s,border-color .25s}
+.showcase-link:hover{gap:18px;border-color:var(--gold-bright)}
+.showcase-link::after{content:'\2192'}
+
+/* ══ INSTAGRAM ═══════════════════════════════ */
+#instagram{background:var(--bg);padding:80px 52px}
+.ig-hdr{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;margin-bottom:36px}
+.ig-hdr-l h2{font-family:'Noto Serif',serif;font-size:clamp(26px,2.6vw,40px);font-weight:400;line-height:1.12;margin-top:12px}
+.ig-hdr-l h2 em{font-style:italic}
+.ig-hdr-l p{font-size:14px;color:var(--on-sv);font-weight:300;line-height:1.7;margin-top:12px;max-width:280px}
+.btn-ig{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#fff;padding:13px 22px;background:var(--gold);transition:all .25s;margin-top:12px}
+.btn-ig:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:0 6px 20px rgba(122,92,30,.3)}
+.btn-ig:active{transform:translateY(0)}
+.ig-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:3px}
+.ig-cell{aspect-ratio:1;overflow:hidden;position:relative;cursor:pointer}
+.ig-cell img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease,filter .4s}
+.ig-cell:hover img{transform:scale(1.09);filter:brightness(.72)}
+.ig-icon-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;transition:opacity .35s}
+.ig-cell:hover .ig-icon-overlay{opacity:1}
+.ig-icon-overlay svg{width:28px;height:28px;color:#fff;filter:drop-shadow(0 2px 8px rgba(0,0,0,.5));transform:scale(.65);transition:transform .35s .05s}
+.ig-cell:hover .ig-icon-overlay svg{transform:scale(1)}
+.ig-icon-overlay span{font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.8);transform:translateY(4px);transition:transform .35s .08s;opacity:0;transition:opacity .3s .1s,transform .35s .08s}
+.ig-cell:hover .ig-icon-overlay span{opacity:1;transform:translateY(0)}
+.ig-foot{display:flex;justify-content:space-between;align-items:center;margin-top:20px}
+.ig-note{font-size:12px;color:var(--on-sv);font-style:italic;font-weight:300}
+.ig-open{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--on-s);display:inline-flex;align-items:center;gap:8px;border-bottom:1px solid var(--on-s);padding-bottom:1px;transition:gap .35s,color .25s,border-color .25s}
+.ig-open:hover{gap:18px;color:var(--gold);border-color:var(--gold)}
+.ig-open::after{content:'\2192'}
+
+/* ══ PHILOSOPHY ══════════════════════════════ */
+#philosophy{background:var(--dark);padding:100px 52px;scroll-margin-top:60px}
+.phil-hd{text-align:center;max-width:680px;margin:0 auto 68px}
+.phil-hd h2{font-family:'Noto Serif',serif;font-size:clamp(28px,3.8vw,52px);font-weight:400;color:#fff;line-height:1.1;margin:12px 0 18px}
+.phil-hd h2 em{font-style:italic}
+.phil-hd p{font-size:14px;color:rgba(255,255,255,.42);line-height:1.8;font-weight:300}
+.phil-grid{display:grid;grid-template-columns:repeat(3,1fr);max-width:1100px;margin:0 auto}
+.phil-card{padding:36px 32px;border-top:1px solid rgba(255,255,255,.07);transition:background .3s}
+.phil-card:hover{background:rgba(255,255,255,.025)}
+.phil-card:not(:nth-child(3n)){border-right:1px solid rgba(255,255,255,.07)}
+.phil-ttl{font-size:9px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-text);margin-bottom:14px;transition:color .25s}
+.phil-card:hover .phil-ttl{color:var(--gold-bright)}
+.phil-card p{font-size:13px;color:rgba(255,255,255,.38);line-height:1.8;font-weight:300}
+
+/* ══ CONTACT ══════════════════════════════════ */
+#contact{display:grid;grid-template-columns:1fr 1fr;scroll-margin-top:60px}
+.ct-left{background:var(--bg2);padding:80px 64px;display:flex;flex-direction:column;justify-content:center}
+.ct-left h2{font-family:'Noto Serif',serif;font-size:clamp(24px,2.6vw,40px);font-weight:400;color:var(--on-s);line-height:1.12;margin:12px 0 18px}
+.ct-left h2 em{font-style:italic}
+.ct-left-p{font-size:14px;color:var(--on-sv);line-height:1.8;font-weight:300;max-width:360px;margin-bottom:40px}
+.ct-details{display:flex;flex-direction:column;gap:22px}
+.cd label{font-size:8px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-text);display:block;margin-bottom:5px}
+.cd a,.cd span{font-size:14px;color:var(--on-s);font-weight:300;transition:color .25s}
+.cd a:hover{color:var(--gold)}
+.ct-right{background:var(--white);padding:80px 64px;display:flex;flex-direction:column;justify-content:center}
+.ct-sub{font-size:13px;color:var(--on-sv);font-weight:300;margin:10px 0 36px}
+.cf{display:flex;flex-direction:column;gap:16px}
+.cf-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cf label{font-size:8px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--on-sv);display:block;margin-bottom:7px;opacity:.7}
+.cf input,.cf textarea,.cf select{width:100%;background:var(--bg2);border:none;border-bottom:1.5px solid var(--border);color:var(--on-s);font-family:'Manrope',sans-serif;font-size:14px;font-weight:300;padding:12px 14px;outline:none;transition:border-color .3s,background .3s}
+.cf input:focus,.cf textarea:focus,.cf select:focus{border-bottom-color:var(--gold);background:#ede9e0}
+.cf textarea{resize:vertical;min-height:110px}
+.cf select{appearance:none;cursor:pointer}
+.btn-send{width:100%;font-size:10px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:#fff;padding:16px;background:var(--gold);border:none;cursor:pointer;margin-top:8px;transition:all .25s}
+.btn-send:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:0 8px 24px rgba(122,92,30,.32)}
+.btn-send:active{transform:translateY(0)}
+
+/* ══ FOOTER ══════════════════════════════════ */
+footer{background:var(--dark2);padding:64px 52px 32px}
+.ft{display:grid;grid-template-columns:260px 1fr 1fr 1fr;gap:48px;padding-bottom:52px;border-bottom:1px solid rgba(255,255,255,.06)}
+.ft-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.ft-name{font-family:'Noto Serif',serif;font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.ft-desc{font-size:12px;color:rgba(255,255,255,.28);line-height:1.75;font-weight:300}
+.ft-col h5{font-size:8px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:22px}
+.ft-col ul{display:flex;flex-direction:column;gap:13px}
+.ft-col a{font-size:12px;color:rgba(255,255,255,.42);font-weight:300;transition:color .25s,padding-left .25s}
+.ft-col a:hover{color:rgba(255,255,255,.78);padding-left:4px}
+.ft-bot{padding-top:28px;display:flex;justify-content:space-between;align-items:center}
+.ft-copy{font-size:10px;color:rgba(255,255,255,.2);font-weight:300;letter-spacing:.05em}
+
+/* ══ QUOTE MODALS ════════════════════════════ */
+.q-bd{position:fixed;inset:0;z-index:900;background:rgba(10,9,5,0);display:none;align-items:center;justify-content:center}
+.q-bd.open{display:flex;background:rgba(10,9,5,.72);backdrop-filter:blur(8px)}
+.q-card{background:var(--bg);width:100%;max-width:500px;max-height:92vh;display:flex;flex-direction:column;box-shadow:0 32px 80px rgba(0,0,0,.35);position:relative;opacity:0;transform:translateY(20px);animation:none}
+.q-bd.open .q-card{animation:modalIn .35s ease forwards}
+@keyframes modalIn{to{opacity:1;transform:translateY(0)}}
+.q-top{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-lt))}
+.q-head{padding:28px 32px 22px;border-bottom:1px solid var(--border);position:relative}
+.q-title{font-family:'Noto Serif',serif;font-size:20px;font-weight:400;color:var(--on-s);margin-bottom:4px}
+.q-sub{font-size:12px;color:var(--on-sv);font-weight:300}
+.q-x{position:absolute;top:22px;right:24px;font-size:22px;color:var(--on-sv);cursor:pointer;line-height:1;padding:4px;transition:color .2s,transform .25s}
+.q-x:hover{color:var(--on-s);transform:rotate(90deg)}
+.q-body{padding:28px 32px;overflow-y:auto;flex:1}
+.q-step{display:none}
+.q-step.active{display:block}
+.q-lbl{font-size:9px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-text);display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.q-lbl::before{content:'';width:14px;height:1px;background:var(--gold-text)}
+.q-q{font-family:'Noto Serif',serif;font-size:22px;font-weight:400;color:var(--on-s);margin-bottom:22px;line-height:1.2}
+.q-opts{display:flex;flex-direction:column;gap:8px}
+.q-opt{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border:1px solid var(--border);cursor:pointer;font-size:13px;color:var(--on-sv);transition:border-color .25s,color .25s,transform .25s,background .25s}
+.q-opt:hover{border-color:rgba(122,92,30,.4);color:var(--on-s);transform:translateX(3px);background:rgba(122,92,30,.03)}
+.q-opt.sel{border-color:var(--gold);background:rgba(122,92,30,.06);color:var(--on-s)}
+.q-ol{display:flex;align-items:center;gap:12px}
+.q-ic{width:16px;height:16px;opacity:.4;flex-shrink:0}
+.q-ck{width:18px;height:18px;border:1.5px solid var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.q-opt.sel .q-ck{background:var(--gold);border-color:var(--gold)}
+.q-opt.sel .q-ck::after{content:'';width:5px;height:9px;border-right:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(42deg) translate(-1px,-1px);display:block}
+.q-inp{width:100%;background:var(--bg2);border:none;border-bottom:1.5px solid var(--border);color:var(--on-s);font-family:'Manrope',sans-serif;font-size:14px;font-weight:300;padding:13px 0;outline:none;transition:border-color .3s;margin-bottom:12px}
+.q-inp:focus{border-bottom-color:var(--gold)}
+.q-ta{resize:vertical;min-height:90px;padding:12px 0}
+.q-foot{padding:20px 32px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.q-cnt{font-size:12px;color:var(--on-sv);font-weight:500}
+.q-btns{display:flex;gap:10px;align-items:center}
+.q-bk{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--on-sv);transition:color .2s}
+.q-bk:hover{color:var(--on-s)}
+.q-nx{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#fff;padding:12px 22px;background:var(--gold);border:none;cursor:pointer;transition:all .25s}
+.q-nx:hover{background:var(--gold-lt);transform:translateY(-1px);box-shadow:0 4px 14px rgba(122,92,30,.3)}
+.q-nx:active{transform:translateY(0)}
+.q-ty{display:none;text-align:center;padding:32px 0}
+.q-ty.active{display:block}
+.q-ty h3{font-family:'Noto Serif',serif;font-size:26px;font-weight:400;color:var(--on-s);margin-bottom:10px}
+.q-ty p{font-size:13px;color:var(--on-sv);font-weight:300;line-height:1.7}
+
+/* ══ RESPONSIVE ══════════════════════════════ */
+@media(max-width:1024px){
+  nav{padding:0 24px}.nav-links{display:none}.nav-ham{display:flex}
+  .hero-body{padding:0 28px}.hero-tags{left:28px}.hero-scroll{right:28px}
+  .stats-bar{grid-template-columns:repeat(2,1fr)}
+  #about{grid-template-columns:1fr}.about-img{height:380px}.about-body{padding:52px 36px}
+  .svc-intro{grid-template-columns:1fr;padding:60px 28px 0}
+  .svc-tabs-row{margin-left:28px;margin-right:28px}.svc-panel{padding:0 28px}
+  .svc-blocks{grid-template-columns:1fr}
+  .svc-block:nth-child(even){padding-left:0;border-left:none}
+  .svc-block:nth-child(odd){padding-right:0}
+  .work-gallery{grid-template-columns:1fr 1fr;height:auto}.work-item{height:260px}
+  .showcase-inner{grid-template-columns:1fr}.showcase-video-wrap{height:300px}.showcase-body{padding:52px 36px}
+  .ig-grid{grid-template-columns:repeat(3,1fr)}
+  #instagram{padding:60px 28px}
+  #philosophy{padding:80px 28px}
+  .phil-grid{grid-template-columns:1fr 1fr}
+  .phil-card:nth-child(2n){border-right:none}
+  .phil-card:nth-child(2n+1){border-right:1px solid rgba(255,255,255,.07)}
+  #contact{grid-template-columns:1fr}.ct-left,.ct-right{padding:56px 36px}
+  footer{padding:52px 28px 28px}.ft{grid-template-columns:1fr 1fr;gap:36px}
+}
+@media(max-width:640px){
+  h1{font-size:clamp(36px,9vw,52px)}.hero-body{padding:0 20px}
+  .work-gallery{grid-template-columns:1fr}.work-item{height:260px}
+  .ig-grid{grid-template-columns:repeat(2,1fr)}.ig-hdr{flex-direction:column;gap:16px}
+  .phil-grid{grid-template-columns:1fr}.phil-card:not(:nth-child(3n)){border-right:none}
+  .ft{grid-template-columns:1fr}.cf-2{grid-template-columns:1fr}.q-card{max-width:100%;margin:16px}
+}
+</style></head><body>
+
+<!-- ═══ NAV ══════════════════════════════════════ -->
+<nav id="mainNav">
+  <a href="#" class="logo-wrap">
+    <div class="logo-emblem">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g class="logo-ring-outer">
+          <circle cx="20" cy="20" r="19" stroke="#7a5c1e" stroke-width="0.7" opacity="0.4"/>
+          <circle cx="20" cy="20" r="16.5" stroke="#7a5c1e" stroke-width="1.1"/>
+          <line x1="20" y1="2.5" x2="20" y2="5.2" stroke="#7a5c1e" stroke-width="1" stroke-linecap="square"/>
+          <line x1="20" y1="34.8" x2="20" y2="37.5" stroke="#7a5c1e" stroke-width="1" stroke-linecap="square"/>
+          <line x1="2.5" y1="20" x2="5.2" y2="20" stroke="#7a5c1e" stroke-width="1" stroke-linecap="square"/>
+          <line x1="34.8" y1="20" x2="37.5" y2="20" stroke="#7a5c1e" stroke-width="1" stroke-linecap="square"/>
+          <line x1="7.6" y1="7.6" x2="9.6" y2="9.6" stroke="#7a5c1e" stroke-width="0.9" stroke-linecap="square"/>
+          <line x1="30.4" y1="30.4" x2="32.4" y2="32.4" stroke="#7a5c1e" stroke-width="0.9" stroke-linecap="square"/>
+          <line x1="32.4" y1="7.6" x2="30.4" y2="9.6" stroke="#7a5c1e" stroke-width="0.9" stroke-linecap="square"/>
+          <line x1="9.6" y1="30.4" x2="7.6" y2="32.4" stroke="#7a5c1e" stroke-width="0.9" stroke-linecap="square"/>
+        </g>
+        <g class="logo-spokes-g">
+          <line x1="20" y1="20" x2="20" y2="6.5" stroke="#7a5c1e" stroke-width="1.1" stroke-linecap="square"/>
+          <line x1="20" y1="20" x2="20" y2="33.5" stroke="#7a5c1e" stroke-width="1.1" stroke-linecap="square"/>
+          <line x1="20" y1="20" x2="6.5" y2="20" stroke="#7a5c1e" stroke-width="1.1" stroke-linecap="square"/>
+          <line x1="20" y1="20" x2="33.5" y2="20" stroke="#7a5c1e" stroke-width="1.1" stroke-linecap="square"/>
+          <line x1="20" y1="20" x2="10.3" y2="10.3" stroke="#7a5c1e" stroke-width="0.9" stroke-linecap="square"/>
+          <line x1="20" y1="20" x2="29.7" y2="29.7" stroke="#7a5c1e" stroke-width="0.9" stroke-linecap="square"/>
+          <line x1="20" y1="20" x2="29.7" y2="10.3" stroke="#7a5c1e" stroke-width="0.9" stroke-linecap="square"/>
+          <line x1="20" y1="20" x2="10.3" y2="29.7" stroke="#7a5c1e" stroke-width="0.9" stroke-linecap="square"/>
+        </g>
+        <circle cx="20" cy="20" r="2.8" fill="#7a5c1e"/>
+        <circle cx="20" cy="20" r="1.3" fill="#c8a850"/>
+      </svg>
+    </div>
+    <div class="logo-text">
+      <span class="logo-name">Drinks Designers</span>
+      <span class="logo-sub">Bar Consultancy &middot; London</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#clients">Clients</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#philosophy">Approach</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#" class="nav-cta" onclick="openQ('event');return false">Get a Quote</a>
+  <div class="nav-ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div id="mMenu"><ul>
+  <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+  <li><a href="#clients" onclick="toggleMenu()">Clients</a></li>
+  <li><a href="#work" onclick="toggleMenu()">Work</a></li>
+  <li><a href="#philosophy" onclick="toggleMenu()">Approach</a></li>
+  <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+  <li><a href="#" class="m-cta" onclick="toggleMenu();openQ('event');return false">Get a Quote</a></li>
+</ul></div>
+
+<!-- ═══ HERO — HD Unsplash bar photo ══════════════ -->
+<section id="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=2000&q=90&auto=format&fit=crop" alt="Premium cocktail bar experience">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-body">
+    <div class="hero-ey">Bar Consultancy &amp; Event Bar Catering &middot; London, UK</div>
+    <h1>Designing<br><em>Exceptional</em><br>Drinks<br>Experiences.</h1>
+    <p class="hero-desc">Drinks Designers is a London-based bar consultancy and event drinks studio. We help venues, brands, and private clients craft bespoke cocktail programs, refined beverage menus, and premium event bar experiences across the UK.</p>
+    <div class="hero-btns">
+      <a href="#services" class="btn-gold">Explore Our Services</a>
+      <a href="#contact" class="btn-ol">Start a Conversation</a>
+    </div>
+  </div>
+  <div class="hero-tags">
+    <div class="hero-tag">Bar Consultancy</div>
+    <div class="hero-tag">Event Bar Catering</div>
+    <div class="hero-tag">London &amp; UK-Wide</div>
+    <div class="hero-tag">Bespoke Menus</div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- ═══ STATS BAR ══════════════════════════════════ -->
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-val">UK</div><div class="stat-lbl">Based Studio</div></div>
+  <div class="stat-item"><div class="stat-val">3</div><div class="stat-lbl">Countries Experience</div></div>
+  <div class="stat-item"><div class="stat-val">14+</div><div class="stat-lbl">Venue Clients</div></div>
+  <div class="stat-item"><div class="stat-val" style="font-style:italic">Bespoke</div><div class="stat-lbl">Every Project</div></div>
+</div>
+
+<!-- ═══ ABOUT ══════════════════════════════════════ -->
+<section id="about">
+  <div class="about-img">
+    <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775682111/dd-photo-smoke_c1l8mg.jpg" alt="Cocktail theatre — the smoke reveal">
+  </div>
+  <div class="about-body">
+    <div class="eb">Our Foundation</div>
+    <h2>A Drinks Studio Built on<br><em>Hospitality Expertise.</em></h2>
+    <p>Drinks Designers is a boutique beverage catering and consulting firm, a place where drinks have no limits. Founded by a hospitality professional with international experience across India, the United States, and the United Kingdom.</p>
+    <p>We combine creative thinking with real operational knowledge, building drinks programs that are visually compelling, commercially strong, and consistently excellent.</p>
+    <div class="about-divider"></div>
+    <div class="about-stats">
+      <div><div class="about-stat-val">3</div><div class="about-stat-lbl">Countries Experience</div></div>
+      <div><div class="about-stat-val">14+</div><div class="about-stat-lbl">Venue Clients</div></div>
+    </div>
+    <a href="#services" class="about-link">What We Do</a>
+  </div>
+</section>
+
+<!-- ═══ CLIENTS TICKER ═════════════════════════════ -->
+<div id="clients" style="scroll-margin-top:60px">
+  <div class="clients-wrap">
+    <div class="clients-label">Trusted by Leading Hospitality Venues</div>
+    <div class="ticker-outer"><div class="ticker-track">
+      <div class="ticker-item"><span class="ticker-sep"></span>Knight of Notting Hill</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>China Bistro</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>India Bistro</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>Farzi Caf&eacute;</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>Papaya</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>Bo Tai</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>Xoox</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>ITC Kohenur</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>ITC Rajputana</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>Oberoi Hotels</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>Smoke House Deli</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>The Park Hotels</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>Hard Rock Cafe</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>Taj Hotels</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>Knight of Notting Hill</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>China Bistro</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>India Bistro</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>Farzi Caf&eacute;</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>Papaya</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>Bo Tai</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>Xoox</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>ITC Kohenur</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>ITC Rajputana</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>Oberoi Hotels</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>Smoke House Deli</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>The Park Hotels</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>Hard Rock Cafe</div>
+      <div class="ticker-item"><span class="ticker-sep"></span>Taj Hotels</div>
+    </div></div>
+  </div>
+</div>
+
+<!-- ═══ SERVICES ════════════════════════════════════ -->
+<section id="services">
+  <div class="svc-intro">
+    <div>
+      <div class="eb" style="color:rgba(180,148,80,.7)">What We Do</div>
+      <div class="svc-intro-h" style="margin-top:14px">Bar Consultancy &amp; <em>Event Bar Catering.</em></div>
+    </div>
+    <div class="svc-intro-right">
+      <p>Two focused, world-class services. From mobile cocktail bar hire in London to full beverage program consultancy, delivered with precision, creativity, and craft.</p>
+      <div class="svc-tab-btns">
+        <button class="svc-tab-btn" onclick="switchSvc('catering',this)">Event Bar Catering</button>
+        <button class="svc-tab-btn active" onclick="switchSvc('consultancy',this)">Bar Consultancy</button>
+      </div>
+    </div>
+  </div>
+  <div class="svc-tabs-row">
+    <button class="svc-tab-link" onclick="switchPanel('catering',this)">Event Bar Catering</button>
+    <button class="svc-tab-link active" onclick="switchPanel('consultancy',this)">Bar Consultancy</button>
+  </div>
+
+  <!-- BAR CONSULTANCY — no photo in header -->
+  <div class="svc-panel active" id="panel-consultancy">
+    <div class="svc-panel-head">
+      <h3>Leading UK Bar Consultancy for High-Performance Hospitality Concepts</h3>
+      <p>We design, develop and optimise bar programmes for hotels, restaurants, cocktail bars and drink brands. From concept to execution.</p>
+      <button class="svc-brief-btn" onclick="openQ('consultancy')"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>Start a Consultancy Brief</button>
+    </div>
+    <div class="svc-blocks">
+      <div class="svc-block">
+        <div class="svc-ghost">01</div><div class="svc-num">01</div>
+        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square">
+          <circle cx="18" cy="18" r="14"/><circle cx="18" cy="18" r="3"/>
+          <line x1="18" y1="4" x2="18" y2="9"/><line x1="18" y1="27" x2="18" y2="32"/>
+          <line x1="4" y1="18" x2="9" y2="18"/><line x1="27" y1="18" x2="32" y2="18"/>
+          <line x1="8.5" y1="8.5" x2="12" y2="12"/><line x1="24" y1="24" x2="27.5" y2="27.5"/>
+          <line x1="27.5" y1="8.5" x2="24" y2="12"/><line x1="12" y1="24" x2="8.5" y2="27.5"/>
+        </svg>
+        <div class="svc-eb">Strategy &amp; Concept</div>
+        <h4>Concept Development &amp; Bar Strategy</h4>
+        <p class="svc-desc">Strategic bar concept development and positioning designed to create distinctive, market-driven hospitality experiences.</p>
+        <ul class="svc-list"><li>Bar concept creation tailored to your venue and target market</li><li>Brand positioning for strong market differentiation</li><li>Market research and feasibility studies</li><li>End-to-end project management from concept to execution</li><li>Business development and growth strategy for long-term scalability</li></ul>
+      </div>
+      <div class="svc-block">
+        <div class="svc-ghost">02</div><div class="svc-num">02</div>
+        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square">
+          <rect x="7" y="4" width="22" height="28"/>
+          <line x1="12" y1="11" x2="24" y2="11"/><line x1="12" y1="16" x2="24" y2="16"/>
+          <line x1="12" y1="21" x2="20" y2="21"/><line x1="12" y1="26" x2="18" y2="26"/>
+          <circle cx="24" cy="25" r="4"/>
+          <line x1="22.5" y1="25" x2="25.5" y2="25"/><line x1="24" y1="23.5" x2="24" y2="26.5"/>
+        </svg>
+        <div class="svc-eb">Menu Engineering</div>
+        <h4>Menu Engineering &amp; Development</h4>
+        <p class="svc-desc">Innovative, revenue-driven cocktail and beverage menus designed to enhance guest experience, optimise costs, and maximise profitability.</p>
+        <ul class="svc-list"><li>Profitable menu design and layout aligned with your concept</li><li>Cocktail recipe creation and standardisation</li><li>Beverage cost analysis and margin optimisation</li><li>Wine, cocktail, and food pairing development</li><li>Supplier sourcing and procurement planning</li></ul>
+      </div>
+      <div class="svc-block">
+        <div class="svc-ghost">03</div><div class="svc-num">03</div>
+        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square">
+          <circle cx="14" cy="10" r="5"/>
+          <path d="M4 30 C4 22 24 22 24 30"/>
+          <polyline points="27,10 28.5,13.5 32,13.5 29.5,16 30.5,19.5 27,17.5 23.5,19.5 24.5,16 22,13.5 25.5,13.5"/>
+        </svg>
+        <div class="svc-eb">Setup &amp; Training</div>
+        <h4>Bar Setup, Training &amp; Pre-Opening</h4>
+        <p class="svc-desc">Hands-on operational support to get your bar team ready to deliver excellence from day one.</p>
+        <ul class="svc-list"><li>Staff recruitment guidance and bartender training programmes</li><li>SOP development and service standards documentation</li><li>Pre-opening setup, equipment specification and bar layout</li><li>Live training, mock service, and team coaching</li></ul>
+      </div>
+      <div class="svc-block">
+        <div class="svc-ghost">04</div><div class="svc-num">04</div>
+        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square">
+          <line x1="4" y1="30" x2="32" y2="30"/>
+          <rect x="7" y="20" width="5" height="10"/><rect x="15" y="13" width="5" height="17"/><rect x="23" y="6" width="5" height="24"/>
+          <polyline points="9,19 17,12 25,5"/>
+          <line x1="26" y1="3" x2="30" y2="3"/><line x1="30" y1="3" x2="30" y2="7"/>
+        </svg>
+        <div class="svc-eb">Operations &amp; Growth</div>
+        <h4>Operations Optimisation &amp; Brand Consulting</h4>
+        <p class="svc-desc">Ongoing advisory services to keep your bar running at peak performance and brand-aligned excellence.</p>
+        <ul class="svc-list"><li>Operational audit and performance improvement plans</li><li>Seasonal menu refreshes and range evolution</li><li>Brand partnership and activation strategy</li><li>Retail and wholesale beverage brand development</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- EVENT BAR CATERING — no photo in header -->
+  <div class="svc-panel" id="panel-catering">
+    <div class="svc-panel-head">
+      <h3>Premium Event Bar Catering Across London &amp; the UK</h3>
+      <p>Fully-equipped mobile cocktail bars for weddings, corporate events, brand activations, and private parties &mdash; managed end-to-end by our team.</p>
+      <button class="svc-brief-btn" onclick="openQ('event')"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>Get an Event Bar Quote</button>
+    </div>
+    <div class="svc-blocks">
+      <div class="svc-block">
+        <div class="svc-ghost">01</div><div class="svc-num">01</div>
+        <!-- DINING TABLE icon — centred, proportional -->
+        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square">
+          <rect x="3" y="14" width="30" height="4"/>
+          <line x1="8" y1="18" x2="8" y2="30"/><line x1="28" y1="18" x2="28" y2="30"/>
+          <line x1="5" y1="30" x2="11" y2="30"/><line x1="25" y1="30" x2="31" y2="30"/>
+          <path d="M15 5 L13.5 14 H22.5 L21 5 Z"/>
+          <line x1="18" y1="14" x2="18" y2="17"/>
+          <line x1="15.5" y1="17" x2="20.5" y2="17"/>
+        </svg>
+        <div class="svc-eb">Mobile Bar</div>
+        <h4>Mobile Cocktail Bar Hire</h4>
+        <p class="svc-desc">Beautifully presented, fully self-contained mobile cocktail bars for any venue or outdoor space.</p>
+        <ul class="svc-list"><li>Custom bar units to suit your event aesthetic</li><li>Premium spirits, mixers and glassware included</li><li>Setup, operation and breakdown managed by our team</li><li>Bespoke cocktail menu designed for your event</li></ul>
+      </div>
+      <div class="svc-block">
+        <div class="svc-ghost">02</div><div class="svc-num">02</div>
+        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square">
+          <path d="M7 6 L18 20 L29 6 Z"/>
+          <line x1="18" y1="20" x2="18" y2="28"/>
+          <line x1="12" y1="28" x2="24" y2="28"/>
+          <circle cx="26" cy="9" r="3"/>
+          <line x1="26" y1="6" x2="26" y2="3"/>
+        </svg>
+        <div class="svc-eb">Bespoke Menus</div>
+        <h4>Signature Cocktail Creation</h4>
+        <p class="svc-desc">Photography-ready, guest-memorable signature cocktails built around your event theme or brand identity.</p>
+        <ul class="svc-list"><li>Bespoke event menus with 4&ndash;8 cocktails</li><li>Named and themed serves for weddings and activations</li><li>Non-alcoholic and low-ABV alternatives</li><li>Costed, standardised recipes for consistent delivery</li></ul>
+      </div>
+      <div class="svc-block">
+        <div class="svc-ghost">03</div><div class="svc-num">03</div>
+        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square">
+          <circle cx="12" cy="10" r="4"/><path d="M2 28 C2 21 22 21 22 28"/>
+          <circle cx="26" cy="11" r="3.5"/><path d="M20 28 C21 24 32 24 34 28"/>
+        </svg>
+        <div class="svc-eb">Staffing</div>
+        <h4>Professional Bar Staffing</h4>
+        <p class="svc-desc">Trained, experienced, and brand-aligned bartenders who understand that service is as important as the drink.</p>
+        <ul class="svc-list"><li>Lead bartenders and bar backs for any event size</li><li>Uniform and presentation standards</li><li>Menu knowledge and guest interaction training</li><li>Staff ratios matched to your guest count and service style</li></ul>
+      </div>
+      <div class="svc-block">
+        <div class="svc-ghost">04</div><div class="svc-num">04</div>
+        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square">
+          <rect x="6" y="4" width="24" height="28"/>
+          <line x1="12" y1="12" x2="24" y2="12"/><line x1="12" y1="18" x2="24" y2="18"/><line x1="12" y1="24" x2="20" y2="24"/>
+          <polyline points="22,22 24,25 28,20"/>
+        </svg>
+        <div class="svc-eb">Logistics</div>
+        <h4>Full Event Management</h4>
+        <p class="svc-desc">End-to-end logistics &mdash; from venue visit to final breakdown &mdash; so your event runs without a hitch.</p>
+        <ul class="svc-list"><li>Pre-event venue visit and brief</li><li>Delivery, setup and full waste management</li><li>Liaison with venue, caterers and event coordinators</li><li>Post-event debrief and photo documentation</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WORK GALLERY — Vivek's real photos, no repeats ═══ -->
+<section id="work">
+  <div class="work-gallery">
+    <div class="work-item">
+      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775913098/WhatsApp_Image_2026-04-05_at_1.53.19_AM_2_g7oiui.webp" alt="Signature Craft">
+      <div class="work-info"><div class="work-cat">Signature Craft</div><div class="work-title">The Drinks Designers Touch</div></div>
+    </div>
+    <div class="work-item">
+      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775913098/WhatsApp_Image_2026-04-05_at_1.53.19_AM_1_r6v6ck.webp" alt="Cocktail Theatre">
+      <div class="work-info"><div class="work-cat">Cocktail Theatre</div><div class="work-title">The Smoke Reveal</div></div>
+    </div>
+    <div class="work-item">
+      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775913098/WhatsApp_Image_2026-04-05_at_1.27.48_AM_1_ajfjj0.webp" alt="Event Bar">
+      <div class="work-info"><div class="work-cat">Event Bar</div><div class="work-title">A Night at the Bar</div></div>
+    </div>
+    <div class="work-item">
+      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775913097/WhatsApp_Image_2026-04-05_at_1.27.48_AM_etnsug.webp" alt="Bar Service">
+      <div class="work-info"><div class="work-cat">Bar Service</div><div class="work-title">Live at the Bar</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VIDEO SHOWCASE ═══════════════════════════════ -->
+<section id="showcase">
+  <div class="showcase-inner">
+    <div class="showcase-video-wrap">
+      <video id="showcaseVideo" loop muted playsinline preload="metadata"
+        poster="https://res.cloudinary.com/dh4phv56c/image/upload/v1775682035/dd-photo-branded_da8tt8.jpg">
+        <source src="https://res.cloudinary.com/dh4phv56c/video/upload/v1775682132/dd-video-1_j769is.mp4" type="video/mp4">
+      </video>
+      <div class="showcase-play" id="showcasePlay" onclick="toggleVideo()">
+        <div class="showcase-play-btn">
+          <svg id="playIcon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="showcase-body">
+      <div class="eb" style="color:rgba(180,148,80,.65)">In Action</div>
+      <h2>See Our Craft<br><em>Come to Life.</em></h2>
+      <p>From the first pour to the final garnish, every detail of a Drinks Designers experience is considered, intentional, and built to be remembered.</p>
+      <a href="#contact" class="showcase-link">Work With Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INSTAGRAM — real photos, IG icon on hover, click to profile ═══ -->
+<section id="instagram">
+  <div class="ig-hdr">
+    <div class="ig-hdr-l">
+      <div class="eb">On Instagram</div>
+      <h2>Follow Our<br><em>Craft.</em></h2>
+      <p>Real events, real moments. See our latest work and behind-the-scenes on Instagram.</p>
+    </div>
+    <div>
+      <a href="https://instagram.com/drinks_designers" target="_blank" class="btn-ig">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        Follow @drinks_designers
+      </a>
+    </div>
+  </div>
+  <div class="ig-grid">
+    <a href="https://instagram.com/drinks_designers" target="_blank" class="ig-cell">
+      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775682035/dd-photo-branded_da8tt8.jpg" alt="Drinks Designers branded cocktail">
+      <div class="ig-icon-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>View on Instagram</span></div>
+    </a>
+    <a href="https://instagram.com/drinks_designers" target="_blank" class="ig-cell">
+      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775682083/dd-photo-martini_b4ssio.jpg" alt="Martini">
+      <div class="ig-icon-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>View on Instagram</span></div>
+    </a>
+    <a href="https://instagram.com/drinks_designers" target="_blank" class="ig-cell">
+      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775913098/WhatsApp_Image_2026-04-05_at_1.53.19_AM_2_g7oiui.webp" alt="Signature craft">
+      <div class="ig-icon-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>View on Instagram</span></div>
+    </a>
+    <a href="https://instagram.com/drinks_designers" target="_blank" class="ig-cell">
+      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775913098/WhatsApp_Image_2026-04-05_at_1.53.19_AM_1_r6v6ck.webp" alt="Event moment">
+      <div class="ig-icon-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>View on Instagram</span></div>
+    </a>
+    <a href="https://instagram.com/drinks_designers" target="_blank" class="ig-cell">
+      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775913098/WhatsApp_Image_2026-04-05_at_1.27.48_AM_1_ajfjj0.webp" alt="Live bar">
+      <div class="ig-icon-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>View on Instagram</span></div>
+    </a>
+    <a href="https://instagram.com/drinks_designers" target="_blank" class="ig-cell">
+      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775913097/WhatsApp_Image_2026-04-05_at_1.27.48_AM_etnsug.webp" alt="Bar event">
+      <div class="ig-icon-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>View on Instagram</span></div>
+    </a>
+  </div>
+  <div class="ig-foot">
+    <span class="ig-note">See more at @drinks_designers</span>
+    <a href="https://instagram.com/drinks_designers" target="_blank" class="ig-open">Open Instagram</a>
+  </div>
+</section>
+
+<!-- ═══ PHILOSOPHY ════════════════════════════════════ -->
+<section id="philosophy">
+  <div class="phil-hd">
+    <div class="eb" style="color:rgba(180,148,80,.7);justify-content:center">Our Philosophy</div>
+    <h2>Where Creativity Meets<br><em>Practical Hospitality.</em></h2>
+    <p>Great drinks experiences are never accidental. They are built through clear thinking, operational discipline, and relentless attention to detail.</p>
+  </div>
+  <div class="phil-grid">
+    <div class="phil-card"><div class="phil-ttl">Guest Experience First</div><p>Every decision starts with the guest. How they feel, what they experience, and what they remember when they leave.</p></div>
+    <div class="phil-card"><div class="phil-ttl">Creative but Practical</div><p>Beautiful menus and bold concepts that work in real operation, not just on paper or in a pitch deck.</p></div>
+    <div class="phil-card"><div class="phil-ttl">Strong Operational Systems</div><p>Behind every great bar is a great system. We build the infrastructure that makes quality consistent and scalable.</p></div>
+    <div class="phil-card" style="border-top:none;padding-top:0"><div class="phil-ttl">Commercially Sustainable</div><p>Drinks programs that look premium and perform commercially. Beauty and profitability are not opposites.</p></div>
+    <div class="phil-card" style="border-top:none;padding-top:0"><div class="phil-ttl">Elegant Presentation</div><p>From glassware to garnish, every visual detail of how a drink arrives is part of the experience.</p></div>
+    <div class="phil-card" style="border-top:none;padding-top:0"><div class="phil-ttl">Internationally Informed</div><p>Experience across India, the United States, and the UK informs every brief. Global perspective, London delivery.</p></div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ════════════════════════════════════════ -->
+<section id="contact">
+  <div class="ct-left">
+    <div class="eb">Get in Touch</div>
+    <h2>Start a<br><em>Conversation.</em></h2>
+    <p class="ct-left-p">Whether you're launching a new venue, planning a luxury event, or elevating your existing beverage program, we'd love to hear from you. We reply within 24 hours.</p>
+    <div class="ct-details">
+      <div class="cd"><label>Email</label><a href="mailto:drinksdesigners@gmail.com">drinksdesigners@gmail.com</a></div>
+      <div class="cd"><label>Location</label><span>London, United Kingdom</span></div>
+      <div class="cd"><label>Instagram</label><a href="https://instagram.com/drinks_designers" target="_blank">@drinks_designers</a></div>
+      <div class="cd"><label>Services</label><span>Bar Consultancy &middot; Event Bar Catering</span></div>
+      <div class="cd"><label>Response Time</label><span>Within 24 hours</span></div>
+    </div>
+  </div>
+  <div class="ct-right">
+    <div class="eb" style="color:var(--gold-text)">Enquiry Form</div>
+    <p class="ct-sub">Tell us about your project and we'll come back with a tailored proposal.</p>
+    <div class="cf">
+      <div class="cf-2">
+        <div><label>Your Name</label><input type="text" placeholder="Full name"></div>
+        <div><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
+      </div>
+      <div class="cf-2">
+        <div><label>Phone Number</label><input type="tel" placeholder="+44 ..."></div>
+        <div><label>Service Required</label><select><option>Select service</option><option>Bar Consultancy</option><option>Event Bar Catering</option><option>Cocktail Menu Design</option><option>Staff Training</option><option>Other</option></select></div>
+      </div>
+      <div><label>Tell Us About Your Project</label><textarea placeholder="Event type, date, venue, number of guests, any details..."></textarea></div>
+      <button class="btn-send">Send Enquiry</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ════════════════════════════════════════ -->
+<footer>
+  <div class="ft">
+    <div>
+      <div class="ft-logo">
+        <svg viewBox="0 0 40 40" fill="none" width="28" height="28">
+          <circle cx="20" cy="20" r="19" stroke="#7a5c1e" stroke-width="0.7" opacity="0.4"/>
+          <circle cx="20" cy="20" r="16.5" stroke="#7a5c1e" stroke-width="1.1"/>
+          <line x1="20" y1="2.5" x2="20" y2="5.2" stroke="#7a5c1e" stroke-width="1"/><line x1="20" y1="34.8" x2="20" y2="37.5" stroke="#7a5c1e" stroke-width="1"/>
+          <line x1="2.5" y1="20" x2="5.2" y2="20" stroke="#7a5c1e" stroke-width="1"/><line x1="34.8" y1="20" x2="37.5" y2="20" stroke="#7a5c1e" stroke-width="1"/>
+          <line x1="7.6" y1="7.6" x2="9.6" y2="9.6" stroke="#7a5c1e" stroke-width=".9"/><line x1="30.4" y1="30.4" x2="32.4" y2="32.4" stroke="#7a5c1e" stroke-width=".9"/>
+          <line x1="32.4" y1="7.6" x2="30.4" y2="9.6" stroke="#7a5c1e" stroke-width=".9"/><line x1="9.6" y1="30.4" x2="7.6" y2="32.4" stroke="#7a5c1e" stroke-width=".9"/>
+          <line x1="20" y1="20" x2="20" y2="6.5" stroke="#7a5c1e" stroke-width="1.1"/><line x1="20" y1="20" x2="20" y2="33.5" stroke="#7a5c1e" stroke-width="1.1"/>
+          <line x1="20" y1="20" x2="6.5" y2="20" stroke="#7a5c1e" stroke-width="1.1"/><line x1="20" y1="20" x2="33.5" y2="20" stroke="#7a5c1e" stroke-width="1.1"/>
+          <line x1="20" y1="20" x2="10.3" y2="10.3" stroke="#7a5c1e" stroke-width=".9"/><line x1="20" y1="20" x2="29.7" y2="29.7" stroke="#7a5c1e" stroke-width=".9"/>
+          <line x1="20" y1="20" x2="29.7" y2="10.3" stroke="#7a5c1e" stroke-width=".9"/><line x1="20" y1="20" x2="10.3" y2="29.7" stroke="#7a5c1e" stroke-width=".9"/>
+          <circle cx="20" cy="20" r="2.8" fill="#7a5c1e"/><circle cx="20" cy="20" r="1.3" fill="#c8a850"/>
+        </svg>
+        <span class="ft-name">Drinks Designers</span>
+      </div>
+      <p class="ft-desc">Boutique bar consultancy and event bar catering. London, United Kingdom. A place where drinks have no limits.</p>
+    </div>
+    <div class="ft-col"><h5>Services</h5><ul><li><a href="#services">Bar Consultancy London</a></li><li><a href="#services">Event Bar Catering London</a></li><li><a href="#services">Cocktail Menu Design</a></li><li><a href="#services">Staff Training</a></li></ul></div>
+    <div class="ft-col"><h5>Studio</h5><ul><li><a href="#about">About Us</a></li><li><a href="#philosophy">Our Approach</a></li><li><a href="#work">Work</a></li><li><a href="#clients">Our Clients</a></li></ul></div>
+    <div class="ft-col"><h5>Connect</h5><ul><li><a href="mailto:drinksdesigners@gmail.com">drinksdesigners@gmail.com</a></li><li><a href="https://instagram.com/drinks_designers" target="_blank">Instagram</a></li><li><a href="#contact">Send Enquiry</a></li></ul></div>
+  </div>
+  <div class="ft-bot"><p class="ft-copy">&copy; 2026 Drinks Designers &middot; Bar Consultancy &amp; Event Bar Catering London</p></div>
+</footer>
+
+<!-- EVENT MODAL -->
+<div class="q-bd" id="q-event-bd">
+  <div class="q-card"><div class="q-top"></div>
+    <div class="q-head"><div class="q-title">Event Bar Catering</div><div class="q-sub">Tell us about your event and we'll get back within 24 hours</div><button class="q-x" onclick="closeQ('event')">&#215;</button></div>
+    <div class="q-body" id="q-event-body">
+      <div class="q-step active" data-step="1"><div class="q-lbl">Step 1 of 10</div><div class="q-q">What's the occasion?</div><div class="q-opts">
+        <div class="q-opt" onclick="selQ(this)"><div class="q-ol"><svg class="q-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>Wedding</div><div class="q-ck"></div></div>
+        <div class="q-opt" onclick="selQ(this)"><div class="q-ol"><svg class="q-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Corporate Event</div><div class="q-ck"></div></div>
+        <div class="q-opt" onclick="selQ(this)"><div class="q-ol"><svg class="q-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Private Party</div><div class="q-ck"></div></div>
+        <div class="q-opt" onclick="selQ(this)"><div class="q-ol"><svg class="q-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Brand Activation</div><div class="q-ck"></div></div>
+        <div class="q-opt" onclick="selQ(this)"><div class="q-ol"><svg class="q-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>Other</div><div class="q-ck"></div></div>
+      </div></div>
+      <div class="q-step" data-step="2"><div class="q-lbl">Step 2 of 10</div><div class="q-q">How many guests?</div><div class="q-opts"><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Under 50</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">50 &ndash; 100</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">100 &ndash; 250</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">250 &ndash; 500</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">500+</div><div class="q-ck"></div></div></div></div>
+      <div class="q-step" data-step="3"><div class="q-lbl">Step 3 of 10</div><div class="q-q">Event date?</div><input type="text" class="q-inp" placeholder="e.g. June 2026, or TBC"></div>
+      <div class="q-step" data-step="4"><div class="q-lbl">Step 4 of 10</div><div class="q-q">Services needed?</div><div class="q-opts"><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Full Bar Service</div><div class="q-ck"></div></div><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Cocktail Reception Only</div><div class="q-ck"></div></div><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Bespoke Menu Design</div><div class="q-ck"></div></div><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Mobile Bar Equipment</div><div class="q-ck"></div></div><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Staff Only</div><div class="q-ck"></div></div></div></div>
+      <div class="q-step" data-step="5"><div class="q-lbl">Step 5 of 10</div><div class="q-q">Venue confirmed?</div><div class="q-opts"><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Yes, confirmed</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Shortlisting options</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">No venue yet</div><div class="q-ck"></div></div></div></div>
+      <div class="q-step" data-step="6"><div class="q-lbl">Step 6 of 10</div><div class="q-q">Budget range?</div><div class="q-opts"><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Under &pound;2,000</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">&pound;2,000 &ndash; &pound;5,000</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">&pound;5,000 &ndash; &pound;10,000</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">&pound;10,000+</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Not sure yet</div><div class="q-ck"></div></div></div></div>
+      <div class="q-step" data-step="7"><div class="q-lbl">Step 7 of 10</div><div class="q-q">Themes or preferences?</div><textarea class="q-inp q-ta" placeholder="e.g. Tropical cocktails, brand colours, non-drinkers..."></textarea></div>
+      <div class="q-step" data-step="8"><div class="q-lbl">Step 8 of 10</div><div class="q-q">Your name</div><input type="text" class="q-inp" placeholder="Full name"></div>
+      <div class="q-step" data-step="9"><div class="q-lbl">Step 9 of 10</div><div class="q-q">Your email address</div><input type="email" class="q-inp" placeholder="your@email.com"></div>
+      <div class="q-step" data-step="10"><div class="q-lbl">Step 10 of 10</div><div class="q-q">Anything else?</div><textarea class="q-inp q-ta" placeholder="Additional context or questions..."></textarea></div>
+      <div class="q-ty" id="q-event-ty"><h3>Thank you!</h3><p>We'll be in touch within 24 hours with your personalised quote.</p></div>
+    </div>
+    <div class="q-foot"><div class="q-cnt" id="q-event-cnt">1 / 10</div><div class="q-btns"><button class="q-bk" id="q-event-bk" style="visibility:hidden" onclick="qBack('event',10)">Back</button><button class="q-nx" id="q-event-nx" onclick="qNext('event',10)">Next &#8250;</button></div></div>
+  </div>
+</div>
+
+<!-- CONSULTANCY MODAL -->
+<div class="q-bd" id="q-consultancy-bd">
+  <div class="q-card"><div class="q-top"></div>
+    <div class="q-head"><div class="q-title">Bar Consultancy Brief</div><div class="q-sub">Help us understand your project so we can propose the right support</div><button class="q-x" onclick="closeQ('consultancy')">&#215;</button></div>
+    <div class="q-body" id="q-consultancy-body">
+      <div class="q-step active" data-step="1"><div class="q-lbl">Step 1 of 9</div><div class="q-q">What best describes your project?</div><div class="q-opts">
+        <div class="q-opt" onclick="selQ(this)"><div class="q-ol"><svg class="q-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>New venue or opening</div><div class="q-ck"></div></div>
+        <div class="q-opt" onclick="selQ(this)"><div class="q-ol"><svg class="q-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="1"/><path d="M8 21h8m-4-4v4"/></svg>Existing venue</div><div class="q-ck"></div></div>
+        <div class="q-opt" onclick="selQ(this)"><div class="q-ol"><svg class="q-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Brand or activation</div><div class="q-ck"></div></div>
+        <div class="q-opt" onclick="selQ(this)"><div class="q-ol"><svg class="q-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Private client</div><div class="q-ck"></div></div>
+        <div class="q-opt" onclick="selQ(this)"><div class="q-ol"><svg class="q-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/></svg>Other</div><div class="q-ck"></div></div>
+      </div></div>
+      <div class="q-step" data-step="2"><div class="q-lbl">Step 2 of 9</div><div class="q-q">Type of venue?</div><div class="q-opts"><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Hotel or Resort</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Restaurant</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Cocktail Bar</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Members Club</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Other</div><div class="q-ck"></div></div></div></div>
+      <div class="q-step" data-step="3"><div class="q-lbl">Step 3 of 9</div><div class="q-q">Services needed?</div><div class="q-opts"><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Concept &amp; Strategy</div><div class="q-ck"></div></div><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Menu Engineering</div><div class="q-ck"></div></div><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Staff Training</div><div class="q-ck"></div></div><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Operations Optimisation</div><div class="q-ck"></div></div><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Brand Consulting</div><div class="q-ck"></div></div></div></div>
+      <div class="q-step" data-step="4"><div class="q-lbl">Step 4 of 9</div><div class="q-q">Timeline?</div><div class="q-opts"><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Immediate (within 4 weeks)</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">1 &ndash; 3 months</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">3 &ndash; 6 months</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Ongoing / Long-term</div><div class="q-ck"></div></div></div></div>
+      <div class="q-step" data-step="5"><div class="q-lbl">Step 5 of 9</div><div class="q-q">Budget range?</div><div class="q-opts"><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Under &pound;5,000</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">&pound;5,000 &ndash; &pound;15,000</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">&pound;15,000 &ndash; &pound;30,000</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">&pound;30,000+</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">To be discussed</div><div class="q-ck"></div></div></div></div>
+      <div class="q-step" data-step="6"><div class="q-lbl">Step 6 of 9</div><div class="q-q">Tell us about your project</div><textarea class="q-inp q-ta" placeholder="Describe your venue, concept, goals, and any specific challenges..."></textarea></div>
+      <div class="q-step" data-step="7"><div class="q-lbl">Step 7 of 9</div><div class="q-q">Your name</div><input type="text" class="q-inp" placeholder="Full name"></div>
+      <div class="q-step" data-step="8"><div class="q-lbl">Step 8 of 9</div><div class="q-q">Your email address</div><input type="email" class="q-inp" placeholder="your@email.com"></div>
+      <div class="q-step" data-step="9"><div class="q-lbl">Step 9 of 9</div><div class="q-q">Company or venue name</div><input type="text" class="q-inp" placeholder="Company or venue name (optional)"></div>
+      <div class="q-ty" id="q-consultancy-ty"><h3>Thank you!</h3><p>We'll be in touch within 24 hours to discuss your project.</p></div>
+    </div>
+    <div class="q-foot"><div class="q-cnt" id="q-consultancy-cnt">1 / 9</div><div class="q-btns"><button class="q-bk" id="q-consultancy-bk" style="visibility:hidden" onclick="qBack('consultancy',9)">Back</button><button class="q-nx" id="q-consultancy-nx" onclick="qNext('consultancy',9)">Next &#8250;</button></div></div>
+  </div>
+</div>
+
+<script>
+// Nav scroll
+window.addEventListener('scroll',()=>{document.getElementById('mainNav').classList.toggle('scrolled',scrollY>40)})
+
+// Mobile menu
+function toggleMenu(){var m=document.getElementById('mMenu');m.style.display=m.style.display==='block'?'none':'block'}
+
+// Service panel switching
+function switchPanel(id,btn){
+  document.querySelectorAll('.svc-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.svc-tab-link').forEach(b=>b.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+function switchSvc(id,btn){
+  document.querySelectorAll('.svc-panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+  document.querySelectorAll('.svc-tab-link').forEach(b=>{b.classList.toggle('active',b.getAttribute('onclick').includes(id))});
+  document.querySelectorAll('.svc-tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+// Video play/pause
+var videoPlaying=false;
+function toggleVideo(){
+  var v=document.getElementById('showcaseVideo');
+  var overlay=document.getElementById('showcasePlay');
+  var icon=document.getElementById('playIcon');
+  if(videoPlaying){
+    v.pause();
+    overlay.style.opacity='1';
+    icon.setAttribute('d','M5,3 19,12 5,21');
+    videoPlaying=false;
+  } else {
+    v.play();
+    overlay.style.opacity='0';
+    overlay.style.pointerEvents='none';
+    setTimeout(function(){overlay.style.pointerEvents='auto'},300);
+    videoPlaying=true;
+  }
+}
+document.getElementById('showcaseVideo').addEventListener('ended',function(){
+  videoPlaying=false;
+  document.getElementById('showcasePlay').style.opacity='1';
+});
+document.getElementById('showcaseVideo').addEventListener('click',function(){
+  toggleVideo();
+});
+
+// Quote modals
+var qS={}
+function openQ(t){qS[t]=1;document.getElementById('q-'+t+'-bd').classList.add('open');document.body.style.overflow='hidden';renderQ(t)}
+function closeQ(t){document.getElementById('q-'+t+'-bd').classList.remove('open');document.body.style.overflow=''}
+function renderQ(t){
+  var tot=t==='event'?10:9,s=qS[t]||1,body=document.getElementById('q-'+t+'-body');
+  body.querySelectorAll('.q-step').forEach(el=>el.classList.remove('active'));
+  var cur=body.querySelector('.q-step[data-step="'+s+'"]');
+  if(cur)cur.classList.add('active');
+  document.getElementById('q-'+t+'-cnt').textContent=s+' / '+tot;
+  document.getElementById('q-'+t+'-bk').style.visibility=s>1?'visible':'hidden';
+  document.getElementById('q-'+t+'-nx').textContent=s<tot?'Next \u203a':'Submit \u203a';
+  body.scrollTop=0;
+}
+function qNext(t,tot){
+  var s=qS[t]||1;
+  if(s<tot){qS[t]=s+1;renderQ(t)}
+  else{
+    document.getElementById('q-'+t+'-body').querySelectorAll('.q-step').forEach(el=>el.classList.remove('active'));
+    document.getElementById('q-'+t+'-ty').classList.add('active');
+    document.getElementById('q-'+t+'-nx').style.display='none';
+    document.getElementById('q-'+t+'-bk').style.visibility='hidden';
+    document.getElementById('q-'+t+'-cnt').textContent='';
+  }
+}
+function qBack(t,tot){var s=qS[t]||1;if(s>1){qS[t]=s-1;renderQ(t)}}
+function selQ(el){el.closest('.q-opts').querySelectorAll('.q-opt').forEach(o=>o.classList.remove('sel'));el.classList.add('sel')}
+document.querySelectorAll('.q-bd').forEach(b=>{b.addEventListener('click',e=>{if(e.target===b)closeQ(b.id.replace('q-','').replace('-bd',''))})})
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeQ('event');closeQ('consultancy')}})
+</script>
+</body></html>
