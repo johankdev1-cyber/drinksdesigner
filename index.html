@@ -22,7 +22,7 @@ button{font-family:'Manrope',sans-serif;cursor:pointer;border:none;background:no
 ul{list-style:none}
 img{display:block}
 
-/* ══ LOGO ════════════════════════════════════ */
+/* ══ LOGO ════════════════════════════════════════ */
 .logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none}
 .logo-emblem{width:40px;height:40px;flex-shrink:0}
 .logo-emblem svg{width:40px;height:40px;overflow:visible}
@@ -36,7 +36,7 @@ img{display:block}
 .logo-wrap:hover .logo-name{letter-spacing:.3em}
 .logo-sub{font-size:7.5px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-text);line-height:1}
 
-/* ══ NAV ═════════════════════════════════════ */
+/* ══ NAV ═════════════════════════════════════════ */
 nav{position:fixed;top:0;left:0;right:0;z-index:600;height:60px;padding:0 52px;display:flex;align-items:center;justify-content:space-between;background:rgba(245,243,238,.96);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.07);transition:box-shadow .4s}
 nav.scrolled{box-shadow:0 2px 32px rgba(0,0,0,.07)}
 .nav-links{display:flex;gap:36px}
@@ -54,7 +54,7 @@ nav.scrolled{box-shadow:0 2px 32px rgba(0,0,0,.07)}
 #mMenu a{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--on-s)}
 #mMenu .m-cta{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#fff;padding:13px 26px;background:var(--gold);margin-top:8px}
 
-/* ══ SHARED ══════════════════════════════════ */
+/* ══ SHARED ══════════════════════════════════════ */
 .eb{display:inline-flex;align-items:center;gap:12px;font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-text)}
 .eb::before{content:'';width:20px;height:1px;background:currentColor;flex-shrink:0}
 .btn-gold{font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#fff;padding:14px 30px;background:var(--gold);display:inline-block;transition:background .25s,transform .2s,box-shadow .25s}
@@ -64,12 +64,12 @@ nav.scrolled{box-shadow:0 2px 32px rgba(0,0,0,.07)}
 .btn-ol:hover{border-color:rgba(255,255,255,.9);color:#fff;transform:translateY(-2px);background:rgba(255,255,255,.07)}
 .btn-ol:active{transform:translateY(0)}
 
-/* ══ HERO ════════════════════════════════════ */
+/* ══ HERO ════════════════════════════════════════ */
 #hero{position:relative;height:100vh;min-height:640px;display:flex;align-items:flex-end;padding-bottom:80px;overflow:hidden}
 .hero-bg{position:absolute;inset:0}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%;transform:scale(1.05);animation:heroZoom 14s ease-out forwards}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;transform:scale(1.06);animation:heroZoom 16s ease-out forwards}
 @keyframes heroZoom{to{transform:scale(1)}}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(110deg,rgba(12,10,6,.84) 0%,rgba(12,10,6,.44) 52%,rgba(12,10,6,.08) 100%)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(110deg,rgba(12,10,6,.86) 0%,rgba(12,10,6,.45) 52%,rgba(12,10,6,.06) 100%)}
 .hero-body{position:relative;z-index:2;padding:0 52px;max-width:620px}
 .hero-ey{font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:rgba(200,170,100,.85);display:flex;align-items:center;gap:12px;margin-bottom:28px;opacity:0;animation:fadeUp .8s .3s ease forwards}
 .hero-ey::before{content:'';width:20px;height:1px;background:rgba(200,170,100,.85)}
@@ -83,7 +83,7 @@ h1 em{font-style:italic;color:var(--gold-bright)}
 .hero-scroll{position:absolute;bottom:36px;right:52px;z-index:2;font-size:8px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.32);writing-mode:vertical-rl}
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
-/* ══ STATS BAR ═══════════════════════════════ */
+/* ══ STATS BAR ═══════════════════════════════════ */
 .stats-bar{background:var(--dark);display:grid;grid-template-columns:repeat(4,1fr)}
 .stat-item{padding:28px 0;text-align:center;border-right:1px solid rgba(255,255,255,.06);transition:background .3s}
 .stat-item:last-child{border-right:none}
@@ -92,7 +92,7 @@ h1 em{font-style:italic;color:var(--gold-bright)}
 .stat-item:hover .stat-val{transform:scale(1.08)}
 .stat-lbl{font-size:8px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.32)}
 
-/* ══ ABOUT ═══════════════════════════════════ */
+/* ══ ABOUT ═══════════════════════════════════════ */
 #about{display:grid;grid-template-columns:1fr 1fr}
 .about-img{position:relative;height:600px;overflow:hidden}
 .about-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
@@ -109,7 +109,7 @@ h1 em{font-style:italic;color:var(--gold-bright)}
 .about-link:hover{gap:18px;color:var(--gold);border-color:var(--gold)}
 .about-link::after{content:'\2192'}
 
-/* ══ CLIENTS TICKER ══════════════════════════ */
+/* ══ CLIENTS TICKER ══════════════════════════════ */
 .clients-wrap{background:var(--dark);overflow:hidden}
 .clients-label{text-align:center;padding:20px 0 10px;font-size:8px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.25)}
 .ticker-outer{overflow:hidden;padding:8px 0 20px}
@@ -120,7 +120,7 @@ h1 em{font-style:italic;color:var(--gold-bright)}
 .ticker-sep{width:4px;height:1px;background:rgba(200,168,80,.4);flex-shrink:0}
 @keyframes tickerAnim{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* ══ SERVICES ════════════════════════════════ */
+/* ══ SERVICES ════════════════════════════════════ */
 #services{background:var(--dark);scroll-margin-top:60px}
 .svc-intro{padding:80px 52px 0;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
 .svc-intro-h{font-family:'Noto Serif',serif;font-size:clamp(26px,3vw,42px);font-weight:400;color:#fff;line-height:1.12;margin:14px 0 0;letter-spacing:-.01em}
@@ -138,7 +138,7 @@ h1 em{font-style:italic;color:var(--gold-bright)}
 .svc-panel.active{display:block}
 .svc-panel-head{padding:52px 0 36px;border-bottom:1px solid rgba(255,255,255,.07)}
 .svc-panel-head h3{font-family:'Noto Serif',serif;font-size:clamp(17px,1.8vw,24px);font-weight:400;color:#fff;margin:0 0 10px}
-.svc-panel-head p{font-size:13px;color:rgba(255,255,255,.42);font-style:italic;line-height:1.7;max-width:680px}
+.svc-panel-head p{font-size:13px;color:rgba(255,255,255,.42);font-style:italic;line-height:1.7;max-width:560px}
 .svc-brief-btn{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.15);padding:10px 18px;cursor:pointer;transition:all .3s}
 .svc-brief-btn:hover{border-color:var(--gold);color:#fff;transform:translateX(4px)}
 .svc-brief-btn:active{transform:translateX(0)}
@@ -153,7 +153,6 @@ h1 em{font-style:italic;color:var(--gold-bright)}
 .svc-block:hover .svc-ghost{color:rgba(200,168,80,.035)}
 .svc-num{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border:1px solid rgba(255,255,255,.15);font-size:10px;font-weight:700;color:rgba(255,255,255,.35);margin-bottom:20px;transition:border-color .3s,color .3s,transform .3s}
 .svc-block:hover .svc-num{border-color:rgba(200,168,80,.5);color:var(--gold-bright);transform:scale(1.06)}
-/* SVG service icon */
 .svc-icon{width:36px;height:36px;margin-bottom:16px;display:block;color:var(--gold-bright);opacity:.38;transition:opacity .4s,transform .4s}
 .svc-block:hover .svc-icon{opacity:.65;transform:scale(1.1) translateY(-2px)}
 .svc-eb{font-size:8px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-text);margin-bottom:10px;display:flex;align-items:center;gap:8px}
@@ -165,38 +164,71 @@ h1 em{font-style:italic;color:var(--gold-bright)}
 .svc-list li{font-size:12px;color:rgba(255,255,255,.35);line-height:1.6;padding-left:16px;position:relative;font-weight:300}
 .svc-list li::before{content:'\2013';position:absolute;left:0;color:rgba(255,255,255,.18)}
 
-/* ══ WORK GALLERY ════════════════════════════ */
+/* ══ PHOTO FLOAT ANIMATION ════════════════════════
+   Subtle upward drift like bubbles, staggered per cell */
+@keyframes floatUp{
+  0%,100%{transform:translateY(0) scale(1)}
+  50%{transform:translateY(-8px) scale(1.012)}
+}
+.photo-float{animation:floatUp 6s ease-in-out infinite;will-change:transform}
+.photo-float:nth-child(2){animation-delay:-2s;animation-duration:7s}
+.photo-float:nth-child(3){animation-delay:-4s;animation-duration:8s}
+.photo-float:nth-child(4){animation-delay:-1s;animation-duration:6.5s}
+
+/* Photo strip — panel-specific wrapper ensures isolation */
+.svc-photo-strip{display:grid;gap:3px;margin-top:3px}
+.svc-photo-strip.cols-2{grid-template-columns:1fr 1fr}
+.svc-photo-strip.cols-4{grid-template-columns:repeat(4,1fr)}
+.svc-photo-cell{overflow:hidden;position:relative}
+.svc-photo-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s ease,filter .5s ease}
+.svc-photo-cell:hover img{transform:scale(1.06)!important;filter:brightness(.9)}
+
+/* ══ WORK GALLERY ════════════════════════════════ */
 #work{scroll-margin-top:60px}
 .work-gallery{display:grid;grid-template-columns:repeat(4,1fr);height:440px}
-.work-item{position:relative;overflow:hidden;cursor:pointer}
-.work-item img{width:100%;height:100%;object-fit:cover;transition:transform .75s cubic-bezier(.25,.46,.45,.94),filter .4s}
-.work-item:hover img{transform:scale(1.07);filter:brightness(.8)}
-.work-info{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,10,6,.88) 0%,rgba(12,10,6,.18) 45%,transparent 65%);display:flex;flex-direction:column;justify-content:flex-end;padding:24px 22px}
-.work-cat{font-size:8px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:5px;transform:translateY(5px);transition:transform .35s}
-.work-item:hover .work-cat{transform:translateY(0)}
-.work-title{font-family:'Noto Serif',serif;font-size:16px;font-weight:400;color:#fff;font-style:italic;transform:translateY(5px);transition:transform .35s .05s}
-.work-item:hover .work-title{transform:translateY(0)}
+.work-item{position:relative;overflow:hidden}
+.work-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .75s cubic-bezier(.25,.46,.45,.94),filter .4s}
+.work-item:hover img{transform:scale(1.07);filter:brightness(.85)}
 
-/* ══ VIDEO SHOWCASE ══════════════════════════ */
-#showcase{background:var(--dark2);position:relative;overflow:hidden}
-.showcase-inner{display:grid;grid-template-columns:1fr 1fr;min-height:480px}
-.showcase-video-wrap{position:relative;overflow:hidden;background:#000}
-.showcase-video-wrap video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
-.showcase-video-wrap:hover video{transform:scale(1.02)}
-.showcase-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(12,10,6,.25);transition:background .3s;cursor:pointer}
-.showcase-play:hover{background:rgba(12,10,6,.1)}
-.showcase-play-btn{width:64px;height:64px;background:rgba(200,168,80,.15);border:1.5px solid rgba(200,168,80,.5);display:flex;align-items:center;justify-content:center;transition:all .3s;backdrop-filter:blur(8px)}
-.showcase-play:hover .showcase-play-btn{background:rgba(200,168,80,.3);border-color:rgba(200,168,80,.9);transform:scale(1.08)}
-.showcase-play-btn svg{width:22px;height:22px;color:rgba(200,168,80,.95);margin-left:3px}
-.showcase-body{padding:72px 64px;display:flex;flex-direction:column;justify-content:center}
-.showcase-body h2{font-family:'Noto Serif',serif;font-size:clamp(26px,2.6vw,38px);font-weight:400;color:#fff;line-height:1.12;margin:16px 0 20px}
-.showcase-body h2 em{font-style:italic}
-.showcase-body p{font-size:14px;color:rgba(255,255,255,.5);line-height:1.85;font-weight:300;max-width:380px;margin-bottom:32px}
-.showcase-link{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bright);border-bottom:1px solid rgba(200,168,80,.4);padding-bottom:2px;transition:gap .35s,border-color .25s}
-.showcase-link:hover{gap:18px;border-color:var(--gold-bright)}
-.showcase-link::after{content:'\2192'}
+/* ══ VIDEO — PREMIUM FULLSCREEN FEATURE ══════════ */
+#video-feature{position:relative;height:100vh;min-height:600px;overflow:hidden;cursor:pointer}
+.vf-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+/* Cinematic letterbox bars */
+.vf-bars{position:absolute;inset:0;pointer-events:none;z-index:2}
+.vf-bar-top{position:absolute;top:0;left:0;right:0;height:10%;background:var(--dark2);transform:translateY(0);transition:transform 1.2s cubic-bezier(.76,0,.24,1)}
+.vf-bar-bot{position:absolute;bottom:0;left:0;right:0;height:10%;background:var(--dark2);transform:translateY(0);transition:transform 1.2s cubic-bezier(.76,0,.24,1)}
+#video-feature.playing .vf-bar-top{transform:translateY(-100%)}
+#video-feature.playing .vf-bar-bot{transform:translateY(100%)}
+/* Dark vignette overlay that fades when playing */
+.vf-overlay{position:absolute;inset:0;z-index:3;background:rgba(12,10,6,.72);transition:background 1s ease;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0}
+#video-feature.playing .vf-overlay{background:rgba(12,10,6,.12);pointer-events:none}
+/* Gold line above play */
+.vf-line{width:1px;height:60px;background:linear-gradient(to bottom,transparent,rgba(200,168,80,.6));margin-bottom:0;transition:height 1s ease,opacity .5s}
+#video-feature.playing .vf-line{opacity:0}
+/* Play ring */
+.vf-play-ring{width:88px;height:88px;border:1.5px solid rgba(200,168,80,.5);display:flex;align-items:center;justify-content:center;position:relative;transition:all .4s ease;flex-shrink:0}
+.vf-play-ring::before{content:'';position:absolute;inset:-12px;border:1px solid rgba(200,168,80,.18);animation:ringPulse 3s ease-in-out infinite}
+@keyframes ringPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.12)}}
+#video-feature:hover .vf-play-ring{border-color:rgba(200,168,80,.9);background:rgba(200,168,80,.08)}
+.vf-play-ring svg{width:22px;height:22px;color:rgba(200,168,80,.95);margin-left:4px;transition:transform .3s}
+#video-feature:hover .vf-play-ring svg{transform:scale(1.15)}
+/* Eyebrow text */
+.vf-eyebrow{font-size:9px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:rgba(200,168,80,.7);margin-top:28px;transition:opacity .5s,transform .5s}
+#video-feature.playing .vf-eyebrow{opacity:0;transform:translateY(8px)}
+/* Big title under */
+.vf-title{font-family:'Noto Serif',serif;font-size:clamp(28px,3.5vw,52px);font-weight:400;color:#fff;line-height:1.1;text-align:center;margin-top:16px;max-width:640px;transition:opacity .5s,transform .5s}
+.vf-title em{font-style:italic;color:var(--gold-bright)}
+#video-feature.playing .vf-title{opacity:0;transform:translateY(12px)}
+/* Pause indicator (only when playing) */
+.vf-pause-hint{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);font-size:8px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.3);opacity:0;transition:opacity .5s;z-index:4}
+#video-feature.playing .vf-pause-hint{opacity:1}
+/* Mute toggle */
+.vf-mute{position:absolute;bottom:36px;right:52px;z-index:5;width:40px;height:40px;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .5s,background .25s;cursor:pointer}
+#video-feature.playing .vf-mute{opacity:1}
+.vf-mute:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.5)}
+.vf-mute svg{width:16px;height:16px;color:rgba(255,255,255,.7)}
 
-/* ══ INSTAGRAM ═══════════════════════════════ */
+/* ══ INSTAGRAM ═══════════════════════════════════ */
 #instagram{background:var(--bg);padding:80px 52px}
 .ig-hdr{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;margin-bottom:36px}
 .ig-hdr-l h2{font-family:'Noto Serif',serif;font-size:clamp(26px,2.6vw,40px);font-weight:400;line-height:1.12;margin-top:12px}
@@ -208,12 +240,12 @@ h1 em{font-style:italic;color:var(--gold-bright)}
 .ig-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:3px}
 .ig-cell{aspect-ratio:1;overflow:hidden;position:relative;cursor:pointer}
 .ig-cell img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease,filter .4s}
-.ig-cell:hover img{transform:scale(1.09);filter:brightness(.72)}
+.ig-cell:hover img{transform:scale(1.09);filter:brightness(.68)}
 .ig-icon-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;transition:opacity .35s}
 .ig-cell:hover .ig-icon-overlay{opacity:1}
 .ig-icon-overlay svg{width:28px;height:28px;color:#fff;filter:drop-shadow(0 2px 8px rgba(0,0,0,.5));transform:scale(.65);transition:transform .35s .05s}
 .ig-cell:hover .ig-icon-overlay svg{transform:scale(1)}
-.ig-icon-overlay span{font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.8);transform:translateY(4px);transition:transform .35s .08s;opacity:0;transition:opacity .3s .1s,transform .35s .08s}
+.ig-icon-overlay span{font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.8);opacity:0;transform:translateY(4px);transition:opacity .3s .1s,transform .35s .08s}
 .ig-cell:hover .ig-icon-overlay span{opacity:1;transform:translateY(0)}
 .ig-foot{display:flex;justify-content:space-between;align-items:center;margin-top:20px}
 .ig-note{font-size:12px;color:var(--on-sv);font-style:italic;font-weight:300}
@@ -221,7 +253,7 @@ h1 em{font-style:italic;color:var(--gold-bright)}
 .ig-open:hover{gap:18px;color:var(--gold);border-color:var(--gold)}
 .ig-open::after{content:'\2192'}
 
-/* ══ PHILOSOPHY ══════════════════════════════ */
+/* ══ PHILOSOPHY ══════════════════════════════════ */
 #philosophy{background:var(--dark);padding:100px 52px;scroll-margin-top:60px}
 .phil-hd{text-align:center;max-width:680px;margin:0 auto 68px}
 .phil-hd h2{font-family:'Noto Serif',serif;font-size:clamp(28px,3.8vw,52px);font-weight:400;color:#fff;line-height:1.1;margin:12px 0 18px}
@@ -235,7 +267,7 @@ h1 em{font-style:italic;color:var(--gold-bright)}
 .phil-card:hover .phil-ttl{color:var(--gold-bright)}
 .phil-card p{font-size:13px;color:rgba(255,255,255,.38);line-height:1.8;font-weight:300}
 
-/* ══ CONTACT ══════════════════════════════════ */
+/* ══ CONTACT ══════════════════════════════════════ */
 #contact{display:grid;grid-template-columns:1fr 1fr;scroll-margin-top:60px}
 .ct-left{background:var(--bg2);padding:80px 64px;display:flex;flex-direction:column;justify-content:center}
 .ct-left h2{font-family:'Noto Serif',serif;font-size:clamp(24px,2.6vw,40px);font-weight:400;color:var(--on-s);line-height:1.12;margin:12px 0 18px}
@@ -258,7 +290,7 @@ h1 em{font-style:italic;color:var(--gold-bright)}
 .btn-send:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:0 8px 24px rgba(122,92,30,.32)}
 .btn-send:active{transform:translateY(0)}
 
-/* ══ FOOTER ══════════════════════════════════ */
+/* ══ FOOTER ══════════════════════════════════════ */
 footer{background:var(--dark2);padding:64px 52px 32px}
 .ft{display:grid;grid-template-columns:260px 1fr 1fr 1fr;gap:48px;padding-bottom:52px;border-bottom:1px solid rgba(255,255,255,.06)}
 .ft-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
@@ -271,7 +303,7 @@ footer{background:var(--dark2);padding:64px 52px 32px}
 .ft-bot{padding-top:28px;display:flex;justify-content:space-between;align-items:center}
 .ft-copy{font-size:10px;color:rgba(255,255,255,.2);font-weight:300;letter-spacing:.05em}
 
-/* ══ QUOTE MODALS ════════════════════════════ */
+/* ══ QUOTE MODALS ════════════════════════════════ */
 .q-bd{position:fixed;inset:0;z-index:900;background:rgba(10,9,5,0);display:none;align-items:center;justify-content:center}
 .q-bd.open{display:flex;background:rgba(10,9,5,.72);backdrop-filter:blur(8px)}
 .q-card{background:var(--bg);width:100%;max-width:500px;max-height:92vh;display:flex;flex-direction:column;box-shadow:0 32px 80px rgba(0,0,0,.35);position:relative;opacity:0;transform:translateY(20px);animation:none}
@@ -314,7 +346,7 @@ footer{background:var(--dark2);padding:64px 52px 32px}
 .q-ty h3{font-family:'Noto Serif',serif;font-size:26px;font-weight:400;color:var(--on-s);margin-bottom:10px}
 .q-ty p{font-size:13px;color:var(--on-sv);font-weight:300;line-height:1.7}
 
-/* ══ RESPONSIVE ══════════════════════════════ */
+/* ══ RESPONSIVE ══════════════════════════════════ */
 @media(max-width:1024px){
   nav{padding:0 24px}.nav-links{display:none}.nav-ham{display:flex}
   .hero-body{padding:0 28px}.hero-tags{left:28px}.hero-scroll{right:28px}
@@ -325,16 +357,16 @@ footer{background:var(--dark2);padding:64px 52px 32px}
   .svc-blocks{grid-template-columns:1fr}
   .svc-block:nth-child(even){padding-left:0;border-left:none}
   .svc-block:nth-child(odd){padding-right:0}
+  .svc-photo-strip.cols-4{grid-template-columns:1fr 1fr}
   .work-gallery{grid-template-columns:1fr 1fr;height:auto}.work-item{height:260px}
-  .showcase-inner{grid-template-columns:1fr}.showcase-video-wrap{height:300px}.showcase-body{padding:52px 36px}
   .ig-grid{grid-template-columns:repeat(3,1fr)}
   #instagram{padding:60px 28px}
   #philosophy{padding:80px 28px}
   .phil-grid{grid-template-columns:1fr 1fr}
-  .phil-card:nth-child(2n){border-right:none}
-  .phil-card:nth-child(2n+1){border-right:1px solid rgba(255,255,255,.07)}
+  .phil-card:nth-child(2n){border-right:none}.phil-card:nth-child(2n+1){border-right:1px solid rgba(255,255,255,.07)}
   #contact{grid-template-columns:1fr}.ct-left,.ct-right{padding:56px 36px}
   footer{padding:52px 28px 28px}.ft{grid-template-columns:1fr 1fr;gap:36px}
+  .vf-title{font-size:clamp(22px,5vw,36px);padding:0 24px}
 }
 @media(max-width:640px){
   h1{font-size:clamp(36px,9vw,52px)}.hero-body{padding:0 20px}
@@ -342,10 +374,11 @@ footer{background:var(--dark2);padding:64px 52px 32px}
   .ig-grid{grid-template-columns:repeat(2,1fr)}.ig-hdr{flex-direction:column;gap:16px}
   .phil-grid{grid-template-columns:1fr}.phil-card:not(:nth-child(3n)){border-right:none}
   .ft{grid-template-columns:1fr}.cf-2{grid-template-columns:1fr}.q-card{max-width:100%;margin:16px}
+  .svc-photo-strip.cols-2,.svc-photo-strip.cols-4{grid-template-columns:1fr}
 }
 </style></head><body>
 
-<!-- ═══ NAV ══════════════════════════════════════ -->
+<!-- NAV -->
 <nav id="mainNav">
   <a href="#" class="logo-wrap">
     <div class="logo-emblem">
@@ -400,10 +433,10 @@ footer{background:var(--dark2);padding:64px 52px 32px}
   <li><a href="#" class="m-cta" onclick="toggleMenu();openQ('event');return false">Get a Quote</a></li>
 </ul></div>
 
-<!-- ═══ HERO — HD Unsplash bar photo ══════════════ -->
+<!-- HERO -->
 <section id="hero">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=2000&q=90&auto=format&fit=crop" alt="Premium cocktail bar experience">
+    <img src="https://images.unsplash.com/photo-1470338745628-171cf53de3a8?w=1920&q=90&auto=format&fit=crop" alt="Premium bar ambience">
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-body">
@@ -424,7 +457,7 @@ footer{background:var(--dark2);padding:64px 52px 32px}
   <div class="hero-scroll">Scroll</div>
 </section>
 
-<!-- ═══ STATS BAR ══════════════════════════════════ -->
+<!-- STATS BAR -->
 <div class="stats-bar">
   <div class="stat-item"><div class="stat-val">UK</div><div class="stat-lbl">Based Studio</div></div>
   <div class="stat-item"><div class="stat-val">3</div><div class="stat-lbl">Countries Experience</div></div>
@@ -432,10 +465,10 @@ footer{background:var(--dark2);padding:64px 52px 32px}
   <div class="stat-item"><div class="stat-val" style="font-style:italic">Bespoke</div><div class="stat-lbl">Every Project</div></div>
 </div>
 
-<!-- ═══ ABOUT ══════════════════════════════════════ -->
+<!-- ABOUT -->
 <section id="about">
   <div class="about-img">
-    <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775682111/dd-photo-smoke_c1l8mg.jpg" alt="Cocktail theatre — the smoke reveal">
+    <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775682111/dd-photo-smoke_c1l8mg.jpg" alt="The smoke reveal">
   </div>
   <div class="about-body">
     <div class="eb">Our Foundation</div>
@@ -451,7 +484,7 @@ footer{background:var(--dark2);padding:64px 52px 32px}
   </div>
 </section>
 
-<!-- ═══ CLIENTS TICKER ═════════════════════════════ -->
+<!-- CLIENTS TICKER -->
 <div id="clients" style="scroll-margin-top:60px">
   <div class="clients-wrap">
     <div class="clients-label">Trusted by Leading Hospitality Venues</div>
@@ -488,7 +521,7 @@ footer{background:var(--dark2);padding:64px 52px 32px}
   </div>
 </div>
 
-<!-- ═══ SERVICES ════════════════════════════════════ -->
+<!-- SERVICES -->
 <section id="services">
   <div class="svc-intro">
     <div>
@@ -508,7 +541,7 @@ footer{background:var(--dark2);padding:64px 52px 32px}
     <button class="svc-tab-link active" onclick="switchPanel('consultancy',this)">Bar Consultancy</button>
   </div>
 
-  <!-- BAR CONSULTANCY — no photo in header -->
+  <!-- BAR CONSULTANCY — photos: branded + martini -->
   <div class="svc-panel active" id="panel-consultancy">
     <div class="svc-panel-head">
       <h3>Leading UK Bar Consultancy for High-Performance Hospitality Concepts</h3>
@@ -516,63 +549,43 @@ footer{background:var(--dark2);padding:64px 52px 32px}
       <button class="svc-brief-btn" onclick="openQ('consultancy')"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>Start a Consultancy Brief</button>
     </div>
     <div class="svc-blocks">
-      <div class="svc-block">
-        <div class="svc-ghost">01</div><div class="svc-num">01</div>
-        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square">
-          <circle cx="18" cy="18" r="14"/><circle cx="18" cy="18" r="3"/>
-          <line x1="18" y1="4" x2="18" y2="9"/><line x1="18" y1="27" x2="18" y2="32"/>
-          <line x1="4" y1="18" x2="9" y2="18"/><line x1="27" y1="18" x2="32" y2="18"/>
-          <line x1="8.5" y1="8.5" x2="12" y2="12"/><line x1="24" y1="24" x2="27.5" y2="27.5"/>
-          <line x1="27.5" y1="8.5" x2="24" y2="12"/><line x1="12" y1="24" x2="8.5" y2="27.5"/>
-        </svg>
-        <div class="svc-eb">Strategy &amp; Concept</div>
-        <h4>Concept Development &amp; Bar Strategy</h4>
+      <div class="svc-block"><div class="svc-ghost">01</div><div class="svc-num">01</div>
+        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square"><circle cx="18" cy="18" r="14"/><circle cx="18" cy="18" r="3"/><line x1="18" y1="4" x2="18" y2="9"/><line x1="18" y1="27" x2="18" y2="32"/><line x1="4" y1="18" x2="9" y2="18"/><line x1="27" y1="18" x2="32" y2="18"/><line x1="8.5" y1="8.5" x2="12" y2="12"/><line x1="24" y1="24" x2="27.5" y2="27.5"/><line x1="27.5" y1="8.5" x2="24" y2="12"/><line x1="12" y1="24" x2="8.5" y2="27.5"/></svg>
+        <div class="svc-eb">Strategy &amp; Concept</div><h4>Concept Development &amp; Bar Strategy</h4>
         <p class="svc-desc">Strategic bar concept development and positioning designed to create distinctive, market-driven hospitality experiences.</p>
         <ul class="svc-list"><li>Bar concept creation tailored to your venue and target market</li><li>Brand positioning for strong market differentiation</li><li>Market research and feasibility studies</li><li>End-to-end project management from concept to execution</li><li>Business development and growth strategy for long-term scalability</li></ul>
       </div>
-      <div class="svc-block">
-        <div class="svc-ghost">02</div><div class="svc-num">02</div>
-        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square">
-          <rect x="7" y="4" width="22" height="28"/>
-          <line x1="12" y1="11" x2="24" y2="11"/><line x1="12" y1="16" x2="24" y2="16"/>
-          <line x1="12" y1="21" x2="20" y2="21"/><line x1="12" y1="26" x2="18" y2="26"/>
-          <circle cx="24" cy="25" r="4"/>
-          <line x1="22.5" y1="25" x2="25.5" y2="25"/><line x1="24" y1="23.5" x2="24" y2="26.5"/>
-        </svg>
-        <div class="svc-eb">Menu Engineering</div>
-        <h4>Menu Engineering &amp; Development</h4>
+      <div class="svc-block"><div class="svc-ghost">02</div><div class="svc-num">02</div>
+        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square"><rect x="7" y="4" width="22" height="28"/><line x1="12" y1="11" x2="24" y2="11"/><line x1="12" y1="16" x2="24" y2="16"/><line x1="12" y1="21" x2="20" y2="21"/><line x1="12" y1="26" x2="18" y2="26"/><circle cx="24" cy="25" r="4"/><line x1="22.5" y1="25" x2="25.5" y2="25"/><line x1="24" y1="23.5" x2="24" y2="26.5"/></svg>
+        <div class="svc-eb">Menu Engineering</div><h4>Menu Engineering &amp; Development</h4>
         <p class="svc-desc">Innovative, revenue-driven cocktail and beverage menus designed to enhance guest experience, optimise costs, and maximise profitability.</p>
         <ul class="svc-list"><li>Profitable menu design and layout aligned with your concept</li><li>Cocktail recipe creation and standardisation</li><li>Beverage cost analysis and margin optimisation</li><li>Wine, cocktail, and food pairing development</li><li>Supplier sourcing and procurement planning</li></ul>
       </div>
-      <div class="svc-block">
-        <div class="svc-ghost">03</div><div class="svc-num">03</div>
-        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square">
-          <circle cx="14" cy="10" r="5"/>
-          <path d="M4 30 C4 22 24 22 24 30"/>
-          <polyline points="27,10 28.5,13.5 32,13.5 29.5,16 30.5,19.5 27,17.5 23.5,19.5 24.5,16 22,13.5 25.5,13.5"/>
-        </svg>
-        <div class="svc-eb">Setup &amp; Training</div>
-        <h4>Bar Setup, Training &amp; Pre-Opening</h4>
+      <div class="svc-block"><div class="svc-ghost">03</div><div class="svc-num">03</div>
+        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square"><circle cx="14" cy="10" r="5"/><path d="M4 30 C4 22 24 22 24 30"/><polyline points="27,10 28.5,13.5 32,13.5 29.5,16 30.5,19.5 27,17.5 23.5,19.5 24.5,16 22,13.5 25.5,13.5"/></svg>
+        <div class="svc-eb">Setup &amp; Training</div><h4>Bar Setup, Training &amp; Pre-Opening</h4>
         <p class="svc-desc">Hands-on operational support to get your bar team ready to deliver excellence from day one.</p>
         <ul class="svc-list"><li>Staff recruitment guidance and bartender training programmes</li><li>SOP development and service standards documentation</li><li>Pre-opening setup, equipment specification and bar layout</li><li>Live training, mock service, and team coaching</li></ul>
       </div>
-      <div class="svc-block">
-        <div class="svc-ghost">04</div><div class="svc-num">04</div>
-        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square">
-          <line x1="4" y1="30" x2="32" y2="30"/>
-          <rect x="7" y="20" width="5" height="10"/><rect x="15" y="13" width="5" height="17"/><rect x="23" y="6" width="5" height="24"/>
-          <polyline points="9,19 17,12 25,5"/>
-          <line x1="26" y1="3" x2="30" y2="3"/><line x1="30" y1="3" x2="30" y2="7"/>
-        </svg>
-        <div class="svc-eb">Operations &amp; Growth</div>
-        <h4>Operations Optimisation &amp; Brand Consulting</h4>
+      <div class="svc-block"><div class="svc-ghost">04</div><div class="svc-num">04</div>
+        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square"><line x1="4" y1="30" x2="32" y2="30"/><rect x="7" y="20" width="5" height="10"/><rect x="15" y="13" width="5" height="17"/><rect x="23" y="6" width="5" height="24"/><polyline points="9,19 17,12 25,5"/><line x1="26" y1="3" x2="30" y2="3"/><line x1="30" y1="3" x2="30" y2="7"/></svg>
+        <div class="svc-eb">Operations &amp; Growth</div><h4>Operations Optimisation &amp; Brand Consulting</h4>
         <p class="svc-desc">Ongoing advisory services to keep your bar running at peak performance and brand-aligned excellence.</p>
         <ul class="svc-list"><li>Operational audit and performance improvement plans</li><li>Seasonal menu refreshes and range evolution</li><li>Brand partnership and activation strategy</li><li>Retail and wholesale beverage brand development</li></ul>
       </div>
     </div>
+    <!-- Consultancy-only photos with float animation -->
+    <div class="svc-photo-strip cols-2">
+      <div class="svc-photo-cell photo-float" style="height:340px">
+        <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775682035/dd-photo-branded_da8tt8.jpg" alt="Drinks Designers branded cocktail">
+      </div>
+      <div class="svc-photo-cell photo-float" style="height:340px">
+        <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775682083/dd-photo-martini_b4ssio.jpg" alt="Perfect martini">
+      </div>
+    </div>
   </div>
 
-  <!-- EVENT BAR CATERING — no photo in header -->
+  <!-- EVENT BAR CATERING — completely separate photos -->
   <div class="svc-panel" id="panel-catering">
     <div class="svc-panel-head">
       <h3>Premium Event Bar Catering Across London &amp; the UK</h3>
@@ -580,109 +593,87 @@ footer{background:var(--dark2);padding:64px 52px 32px}
       <button class="svc-brief-btn" onclick="openQ('event')"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>Get an Event Bar Quote</button>
     </div>
     <div class="svc-blocks">
-      <div class="svc-block">
-        <div class="svc-ghost">01</div><div class="svc-num">01</div>
-        <!-- DINING TABLE icon — centred, proportional -->
-        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square">
-          <rect x="3" y="14" width="30" height="4"/>
-          <line x1="8" y1="18" x2="8" y2="30"/><line x1="28" y1="18" x2="28" y2="30"/>
-          <line x1="5" y1="30" x2="11" y2="30"/><line x1="25" y1="30" x2="31" y2="30"/>
-          <path d="M15 5 L13.5 14 H22.5 L21 5 Z"/>
-          <line x1="18" y1="14" x2="18" y2="17"/>
-          <line x1="15.5" y1="17" x2="20.5" y2="17"/>
-        </svg>
-        <div class="svc-eb">Mobile Bar</div>
-        <h4>Mobile Cocktail Bar Hire</h4>
+      <div class="svc-block"><div class="svc-ghost">01</div><div class="svc-num">01</div>
+        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square"><rect x="3" y="14" width="30" height="4"/><line x1="8" y1="18" x2="8" y2="30"/><line x1="28" y1="18" x2="28" y2="30"/><line x1="5" y1="30" x2="11" y2="30"/><line x1="25" y1="30" x2="31" y2="30"/><path d="M15 5 L13.5 14 H22.5 L21 5 Z"/><line x1="18" y1="14" x2="18" y2="17"/><line x1="15.5" y1="17" x2="20.5" y2="17"/></svg>
+        <div class="svc-eb">Mobile Bar</div><h4>Mobile Cocktail Bar Hire</h4>
         <p class="svc-desc">Beautifully presented, fully self-contained mobile cocktail bars for any venue or outdoor space.</p>
         <ul class="svc-list"><li>Custom bar units to suit your event aesthetic</li><li>Premium spirits, mixers and glassware included</li><li>Setup, operation and breakdown managed by our team</li><li>Bespoke cocktail menu designed for your event</li></ul>
       </div>
-      <div class="svc-block">
-        <div class="svc-ghost">02</div><div class="svc-num">02</div>
-        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square">
-          <path d="M7 6 L18 20 L29 6 Z"/>
-          <line x1="18" y1="20" x2="18" y2="28"/>
-          <line x1="12" y1="28" x2="24" y2="28"/>
-          <circle cx="26" cy="9" r="3"/>
-          <line x1="26" y1="6" x2="26" y2="3"/>
-        </svg>
-        <div class="svc-eb">Bespoke Menus</div>
-        <h4>Signature Cocktail Creation</h4>
+      <div class="svc-block"><div class="svc-ghost">02</div><div class="svc-num">02</div>
+        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square"><path d="M7 6 L18 20 L29 6 Z"/><line x1="18" y1="20" x2="18" y2="28"/><line x1="12" y1="28" x2="24" y2="28"/><circle cx="26" cy="9" r="3"/><line x1="26" y1="6" x2="26" y2="3"/></svg>
+        <div class="svc-eb">Bespoke Menus</div><h4>Signature Cocktail Creation</h4>
         <p class="svc-desc">Photography-ready, guest-memorable signature cocktails built around your event theme or brand identity.</p>
         <ul class="svc-list"><li>Bespoke event menus with 4&ndash;8 cocktails</li><li>Named and themed serves for weddings and activations</li><li>Non-alcoholic and low-ABV alternatives</li><li>Costed, standardised recipes for consistent delivery</li></ul>
       </div>
-      <div class="svc-block">
-        <div class="svc-ghost">03</div><div class="svc-num">03</div>
-        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square">
-          <circle cx="12" cy="10" r="4"/><path d="M2 28 C2 21 22 21 22 28"/>
-          <circle cx="26" cy="11" r="3.5"/><path d="M20 28 C21 24 32 24 34 28"/>
-        </svg>
-        <div class="svc-eb">Staffing</div>
-        <h4>Professional Bar Staffing</h4>
+      <div class="svc-block"><div class="svc-ghost">03</div><div class="svc-num">03</div>
+        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square"><circle cx="12" cy="10" r="4"/><path d="M2 28 C2 21 22 21 22 28"/><circle cx="26" cy="11" r="3.5"/><path d="M20 28 C21 24 32 24 34 28"/></svg>
+        <div class="svc-eb">Staffing</div><h4>Professional Bar Staffing</h4>
         <p class="svc-desc">Trained, experienced, and brand-aligned bartenders who understand that service is as important as the drink.</p>
         <ul class="svc-list"><li>Lead bartenders and bar backs for any event size</li><li>Uniform and presentation standards</li><li>Menu knowledge and guest interaction training</li><li>Staff ratios matched to your guest count and service style</li></ul>
       </div>
-      <div class="svc-block">
-        <div class="svc-ghost">04</div><div class="svc-num">04</div>
-        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square">
-          <rect x="6" y="4" width="24" height="28"/>
-          <line x1="12" y1="12" x2="24" y2="12"/><line x1="12" y1="18" x2="24" y2="18"/><line x1="12" y1="24" x2="20" y2="24"/>
-          <polyline points="22,22 24,25 28,20"/>
-        </svg>
-        <div class="svc-eb">Logistics</div>
-        <h4>Full Event Management</h4>
+      <div class="svc-block"><div class="svc-ghost">04</div><div class="svc-num">04</div>
+        <svg class="svc-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square"><rect x="6" y="4" width="24" height="28"/><line x1="12" y1="12" x2="24" y2="12"/><line x1="12" y1="18" x2="24" y2="18"/><line x1="12" y1="24" x2="20" y2="24"/><polyline points="22,22 24,25 28,20"/></svg>
+        <div class="svc-eb">Logistics</div><h4>Full Event Management</h4>
         <p class="svc-desc">End-to-end logistics &mdash; from venue visit to final breakdown &mdash; so your event runs without a hitch.</p>
         <ul class="svc-list"><li>Pre-event venue visit and brief</li><li>Delivery, setup and full waste management</li><li>Liaison with venue, caterers and event coordinators</li><li>Post-event debrief and photo documentation</li></ul>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ═══ WORK GALLERY — Vivek's real photos, no repeats ═══ -->
-<section id="work">
-  <div class="work-gallery">
-    <div class="work-item">
-      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775913098/WhatsApp_Image_2026-04-05_at_1.53.19_AM_2_g7oiui.webp" alt="Signature Craft">
-      <div class="work-info"><div class="work-cat">Signature Craft</div><div class="work-title">The Drinks Designers Touch</div></div>
-    </div>
-    <div class="work-item">
-      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775913098/WhatsApp_Image_2026-04-05_at_1.53.19_AM_1_r6v6ck.webp" alt="Cocktail Theatre">
-      <div class="work-info"><div class="work-cat">Cocktail Theatre</div><div class="work-title">The Smoke Reveal</div></div>
-    </div>
-    <div class="work-item">
-      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775913098/WhatsApp_Image_2026-04-05_at_1.27.48_AM_1_ajfjj0.webp" alt="Event Bar">
-      <div class="work-info"><div class="work-cat">Event Bar</div><div class="work-title">A Night at the Bar</div></div>
-    </div>
-    <div class="work-item">
-      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775913097/WhatsApp_Image_2026-04-05_at_1.27.48_AM_etnsug.webp" alt="Bar Service">
-      <div class="work-info"><div class="work-cat">Bar Service</div><div class="work-title">Live at the Bar</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ VIDEO SHOWCASE ═══════════════════════════════ -->
-<section id="showcase">
-  <div class="showcase-inner">
-    <div class="showcase-video-wrap">
-      <video id="showcaseVideo" loop muted playsinline preload="metadata"
-        poster="https://res.cloudinary.com/dh4phv56c/image/upload/v1775682035/dd-photo-branded_da8tt8.jpg">
-        <source src="https://res.cloudinary.com/dh4phv56c/video/upload/v1775682132/dd-video-1_j769is.mp4" type="video/mp4">
-      </video>
-      <div class="showcase-play" id="showcasePlay" onclick="toggleVideo()">
-        <div class="showcase-play-btn">
-          <svg id="playIcon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
-        </div>
+    <!-- Event-only photos (4 unique, float animation) -->
+    <div class="svc-photo-strip cols-4">
+      <div class="svc-photo-cell photo-float" style="height:280px">
+        <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775913098/WhatsApp_Image_2026-04-05_at_1.53.19_AM_2_g7oiui.webp" alt="Craft bartending">
+      </div>
+      <div class="svc-photo-cell photo-float" style="height:280px">
+        <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775913098/WhatsApp_Image_2026-04-05_at_1.53.19_AM_1_r6v6ck.webp" alt="Event bar">
+      </div>
+      <div class="svc-photo-cell photo-float" style="height:280px">
+        <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1776115132/APERTIVIO_BAR.jpg_c5q6bx.webp" alt="Aperitivo bar">
+      </div>
+      <div class="svc-photo-cell photo-float" style="height:280px">
+        <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1776115133/WhatsApp_Image_2026-04-05_at_1.18.52_AM_mptjgg.webp" alt="Live service">
       </div>
     </div>
-    <div class="showcase-body">
-      <div class="eb" style="color:rgba(180,148,80,.65)">In Action</div>
-      <h2>See Our Craft<br><em>Come to Life.</em></h2>
-      <p>From the first pour to the final garnish, every detail of a Drinks Designers experience is considered, intentional, and built to be remembered.</p>
-      <a href="#contact" class="showcase-link">Work With Us</a>
-    </div>
   </div>
 </section>
 
-<!-- ═══ INSTAGRAM — real photos, IG icon on hover, click to profile ═══ -->
+<!-- WORK GALLERY — photos only -->
+<section id="work">
+  <div class="work-gallery">
+    <div class="work-item"><img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775913097/WhatsApp_Image_2026-04-05_at_1.27.48_AM_etnsug.webp" alt="Bar service"></div>
+    <div class="work-item"><img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775913098/WhatsApp_Image_2026-04-05_at_1.27.48_AM_1_ajfjj0.webp" alt="Event"></div>
+    <div class="work-item"><img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1776115132/APERTIVIO_BAR.jpg_c5q6bx.webp" alt="Aperitivo bar"></div>
+    <div class="work-item"><img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1776115133/WhatsApp_Image_2026-04-05_at_1.18.52_AM_mptjgg.webp" alt="Live service"></div>
+  </div>
+</section>
+
+<!-- VIDEO FEATURE — PREMIUM FULLSCREEN CINEMATIC -->
+<section id="video-feature" onclick="toggleVF()">
+  <video class="vf-video" id="vfVideo" loop playsinline preload="metadata"
+    poster="https://res.cloudinary.com/dh4phv56c/image/upload/v1775913097/WhatsApp_Image_2026-04-05_at_1.27.48_AM_etnsug.webp">
+    <source src="https://res.cloudinary.com/dh4phv56c/video/upload/v1775682132/dd-video-1_j769is.mp4" type="video/mp4">
+  </video>
+  <!-- letterbox bars -->
+  <div class="vf-bars"><div class="vf-bar-top"></div><div class="vf-bar-bot"></div></div>
+  <!-- overlay with play UI -->
+  <div class="vf-overlay" id="vfOverlay">
+    <div class="vf-line"></div>
+    <div class="vf-play-ring" id="vfPlayRing">
+      <svg id="vfPlayIcon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+    </div>
+    <div class="vf-eyebrow">Watch Our Craft</div>
+    <div class="vf-title">Drinks Designed to<br><em>Be Remembered.</em></div>
+  </div>
+  <div class="vf-pause-hint">Click to pause</div>
+  <!-- mute toggle -->
+  <div class="vf-mute" id="vfMute" onclick="toggleMute(event)">
+    <svg id="vfMuteIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+      <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+    </svg>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
 <section id="instagram">
   <div class="ig-hdr">
     <div class="ig-hdr-l">
@@ -699,7 +690,7 @@ footer{background:var(--dark2);padding:64px 52px 32px}
   </div>
   <div class="ig-grid">
     <a href="https://instagram.com/drinks_designers" target="_blank" class="ig-cell">
-      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775682035/dd-photo-branded_da8tt8.jpg" alt="Drinks Designers branded cocktail">
+      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775682035/dd-photo-branded_da8tt8.jpg" alt="Branded cocktail">
       <div class="ig-icon-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>View on Instagram</span></div>
     </a>
     <a href="https://instagram.com/drinks_designers" target="_blank" class="ig-cell">
@@ -715,11 +706,11 @@ footer{background:var(--dark2);padding:64px 52px 32px}
       <div class="ig-icon-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>View on Instagram</span></div>
     </a>
     <a href="https://instagram.com/drinks_designers" target="_blank" class="ig-cell">
-      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775913098/WhatsApp_Image_2026-04-05_at_1.27.48_AM_1_ajfjj0.webp" alt="Live bar">
+      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1776115132/APERTIVIO_BAR.jpg_c5q6bx.webp" alt="Aperitivo bar">
       <div class="ig-icon-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>View on Instagram</span></div>
     </a>
     <a href="https://instagram.com/drinks_designers" target="_blank" class="ig-cell">
-      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1775913097/WhatsApp_Image_2026-04-05_at_1.27.48_AM_etnsug.webp" alt="Bar event">
+      <img src="https://res.cloudinary.com/dh4phv56c/image/upload/v1776115133/WhatsApp_Image_2026-04-05_at_1.18.52_AM_mptjgg.webp" alt="Live service">
       <div class="ig-icon-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>View on Instagram</span></div>
     </a>
   </div>
@@ -729,7 +720,7 @@ footer{background:var(--dark2);padding:64px 52px 32px}
   </div>
 </section>
 
-<!-- ═══ PHILOSOPHY ════════════════════════════════════ -->
+<!-- PHILOSOPHY -->
 <section id="philosophy">
   <div class="phil-hd">
     <div class="eb" style="color:rgba(180,148,80,.7);justify-content:center">Our Philosophy</div>
@@ -746,7 +737,7 @@ footer{background:var(--dark2);padding:64px 52px 32px}
   </div>
 </section>
 
-<!-- ═══ CONTACT ════════════════════════════════════════ -->
+<!-- CONTACT -->
 <section id="contact">
   <div class="ct-left">
     <div class="eb">Get in Touch</div>
@@ -763,22 +754,24 @@ footer{background:var(--dark2);padding:64px 52px 32px}
   <div class="ct-right">
     <div class="eb" style="color:var(--gold-text)">Enquiry Form</div>
     <p class="ct-sub">Tell us about your project and we'll come back with a tailored proposal.</p>
-    <div class="cf">
-      <div class="cf-2">
-        <div><label>Your Name</label><input type="text" placeholder="Full name"></div>
-        <div><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
+    <form id="contactForm" onsubmit="submitContact(event)">
+      <div class="cf">
+        <div class="cf-2">
+          <div><label>Your Name</label><input type="text" name="name" required placeholder="Full name"></div>
+          <div><label>Email Address</label><input type="email" name="email" required placeholder="your@email.com"></div>
+        </div>
+        <div class="cf-2">
+          <div><label>Phone Number</label><input type="tel" name="phone" placeholder="+44 ..."></div>
+          <div><label>Service Required</label><select name="service"><option value="">Select service</option><option>Bar Consultancy</option><option>Event Bar Catering</option><option>Cocktail Menu Design</option><option>Staff Training</option><option>Other</option></select></div>
+        </div>
+        <div><label>Tell Us About Your Project</label><textarea name="message" required placeholder="Event type, date, venue, number of guests, any details..."></textarea></div>
+        <button type="submit" class="btn-send">Send Enquiry</button>
       </div>
-      <div class="cf-2">
-        <div><label>Phone Number</label><input type="tel" placeholder="+44 ..."></div>
-        <div><label>Service Required</label><select><option>Select service</option><option>Bar Consultancy</option><option>Event Bar Catering</option><option>Cocktail Menu Design</option><option>Staff Training</option><option>Other</option></select></div>
-      </div>
-      <div><label>Tell Us About Your Project</label><textarea placeholder="Event type, date, venue, number of guests, any details..."></textarea></div>
-      <button class="btn-send">Send Enquiry</button>
-    </div>
+    </form>
   </div>
 </section>
 
-<!-- ═══ FOOTER ════════════════════════════════════════ -->
+<!-- FOOTER -->
 <footer>
   <div class="ft">
     <div>
@@ -807,7 +800,7 @@ footer{background:var(--dark2);padding:64px 52px 32px}
   <div class="ft-bot"><p class="ft-copy">&copy; 2026 Drinks Designers &middot; Bar Consultancy &amp; Event Bar Catering London</p></div>
 </footer>
 
-<!-- EVENT MODAL -->
+<!-- EVENT QUOTE MODAL -->
 <div class="q-bd" id="q-event-bd">
   <div class="q-card"><div class="q-top"></div>
     <div class="q-head"><div class="q-title">Event Bar Catering</div><div class="q-sub">Tell us about your event and we'll get back within 24 hours</div><button class="q-x" onclick="closeQ('event')">&#215;</button></div>
@@ -820,21 +813,21 @@ footer{background:var(--dark2);padding:64px 52px 32px}
         <div class="q-opt" onclick="selQ(this)"><div class="q-ol"><svg class="q-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>Other</div><div class="q-ck"></div></div>
       </div></div>
       <div class="q-step" data-step="2"><div class="q-lbl">Step 2 of 10</div><div class="q-q">How many guests?</div><div class="q-opts"><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Under 50</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">50 &ndash; 100</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">100 &ndash; 250</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">250 &ndash; 500</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">500+</div><div class="q-ck"></div></div></div></div>
-      <div class="q-step" data-step="3"><div class="q-lbl">Step 3 of 10</div><div class="q-q">Event date?</div><input type="text" class="q-inp" placeholder="e.g. June 2026, or TBC"></div>
+      <div class="q-step" data-step="3"><div class="q-lbl">Step 3 of 10</div><div class="q-q">Event date?</div><input type="text" class="q-inp" id="ev-date" placeholder="e.g. June 2026, or TBC"></div>
       <div class="q-step" data-step="4"><div class="q-lbl">Step 4 of 10</div><div class="q-q">Services needed?</div><div class="q-opts"><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Full Bar Service</div><div class="q-ck"></div></div><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Cocktail Reception Only</div><div class="q-ck"></div></div><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Bespoke Menu Design</div><div class="q-ck"></div></div><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Mobile Bar Equipment</div><div class="q-ck"></div></div><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Staff Only</div><div class="q-ck"></div></div></div></div>
       <div class="q-step" data-step="5"><div class="q-lbl">Step 5 of 10</div><div class="q-q">Venue confirmed?</div><div class="q-opts"><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Yes, confirmed</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Shortlisting options</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">No venue yet</div><div class="q-ck"></div></div></div></div>
       <div class="q-step" data-step="6"><div class="q-lbl">Step 6 of 10</div><div class="q-q">Budget range?</div><div class="q-opts"><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Under &pound;2,000</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">&pound;2,000 &ndash; &pound;5,000</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">&pound;5,000 &ndash; &pound;10,000</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">&pound;10,000+</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Not sure yet</div><div class="q-ck"></div></div></div></div>
-      <div class="q-step" data-step="7"><div class="q-lbl">Step 7 of 10</div><div class="q-q">Themes or preferences?</div><textarea class="q-inp q-ta" placeholder="e.g. Tropical cocktails, brand colours, non-drinkers..."></textarea></div>
-      <div class="q-step" data-step="8"><div class="q-lbl">Step 8 of 10</div><div class="q-q">Your name</div><input type="text" class="q-inp" placeholder="Full name"></div>
-      <div class="q-step" data-step="9"><div class="q-lbl">Step 9 of 10</div><div class="q-q">Your email address</div><input type="email" class="q-inp" placeholder="your@email.com"></div>
-      <div class="q-step" data-step="10"><div class="q-lbl">Step 10 of 10</div><div class="q-q">Anything else?</div><textarea class="q-inp q-ta" placeholder="Additional context or questions..."></textarea></div>
-      <div class="q-ty" id="q-event-ty"><h3>Thank you!</h3><p>We'll be in touch within 24 hours with your personalised quote.</p></div>
+      <div class="q-step" data-step="7"><div class="q-lbl">Step 7 of 10</div><div class="q-q">Themes or preferences?</div><textarea class="q-inp q-ta" id="ev-themes" placeholder="e.g. Tropical cocktails, brand colours, non-drinkers..."></textarea></div>
+      <div class="q-step" data-step="8"><div class="q-lbl">Step 8 of 10</div><div class="q-q">Your name</div><input type="text" class="q-inp" id="ev-name" placeholder="Full name"></div>
+      <div class="q-step" data-step="9"><div class="q-lbl">Step 9 of 10</div><div class="q-q">Your email address</div><input type="email" class="q-inp" id="ev-email" placeholder="your@email.com"></div>
+      <div class="q-step" data-step="10"><div class="q-lbl">Step 10 of 10</div><div class="q-q">Anything else?</div><textarea class="q-inp q-ta" id="ev-extra" placeholder="Additional context or questions..."></textarea></div>
+      <div class="q-ty" id="q-event-ty"><h3>Thank you!</h3><p>Your enquiry has been sent to drinksdesigners@gmail.com. We'll be in touch within 24 hours with your personalised quote.</p></div>
     </div>
     <div class="q-foot"><div class="q-cnt" id="q-event-cnt">1 / 10</div><div class="q-btns"><button class="q-bk" id="q-event-bk" style="visibility:hidden" onclick="qBack('event',10)">Back</button><button class="q-nx" id="q-event-nx" onclick="qNext('event',10)">Next &#8250;</button></div></div>
   </div>
 </div>
 
-<!-- CONSULTANCY MODAL -->
+<!-- CONSULTANCY QUOTE MODAL -->
 <div class="q-bd" id="q-consultancy-bd">
   <div class="q-card"><div class="q-top"></div>
     <div class="q-head"><div class="q-title">Bar Consultancy Brief</div><div class="q-sub">Help us understand your project so we can propose the right support</div><button class="q-x" onclick="closeQ('consultancy')">&#215;</button></div>
@@ -850,24 +843,22 @@ footer{background:var(--dark2);padding:64px 52px 32px}
       <div class="q-step" data-step="3"><div class="q-lbl">Step 3 of 9</div><div class="q-q">Services needed?</div><div class="q-opts"><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Concept &amp; Strategy</div><div class="q-ck"></div></div><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Menu Engineering</div><div class="q-ck"></div></div><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Staff Training</div><div class="q-ck"></div></div><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Operations Optimisation</div><div class="q-ck"></div></div><div class="q-opt" onclick="this.classList.toggle('sel')"><div class="q-ol">Brand Consulting</div><div class="q-ck"></div></div></div></div>
       <div class="q-step" data-step="4"><div class="q-lbl">Step 4 of 9</div><div class="q-q">Timeline?</div><div class="q-opts"><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Immediate (within 4 weeks)</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">1 &ndash; 3 months</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">3 &ndash; 6 months</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Ongoing / Long-term</div><div class="q-ck"></div></div></div></div>
       <div class="q-step" data-step="5"><div class="q-lbl">Step 5 of 9</div><div class="q-q">Budget range?</div><div class="q-opts"><div class="q-opt" onclick="selQ(this)"><div class="q-ol">Under &pound;5,000</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">&pound;5,000 &ndash; &pound;15,000</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">&pound;15,000 &ndash; &pound;30,000</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">&pound;30,000+</div><div class="q-ck"></div></div><div class="q-opt" onclick="selQ(this)"><div class="q-ol">To be discussed</div><div class="q-ck"></div></div></div></div>
-      <div class="q-step" data-step="6"><div class="q-lbl">Step 6 of 9</div><div class="q-q">Tell us about your project</div><textarea class="q-inp q-ta" placeholder="Describe your venue, concept, goals, and any specific challenges..."></textarea></div>
-      <div class="q-step" data-step="7"><div class="q-lbl">Step 7 of 9</div><div class="q-q">Your name</div><input type="text" class="q-inp" placeholder="Full name"></div>
-      <div class="q-step" data-step="8"><div class="q-lbl">Step 8 of 9</div><div class="q-q">Your email address</div><input type="email" class="q-inp" placeholder="your@email.com"></div>
-      <div class="q-step" data-step="9"><div class="q-lbl">Step 9 of 9</div><div class="q-q">Company or venue name</div><input type="text" class="q-inp" placeholder="Company or venue name (optional)"></div>
-      <div class="q-ty" id="q-consultancy-ty"><h3>Thank you!</h3><p>We'll be in touch within 24 hours to discuss your project.</p></div>
+      <div class="q-step" data-step="6"><div class="q-lbl">Step 6 of 9</div><div class="q-q">Tell us about your project</div><textarea class="q-inp q-ta" id="co-desc" placeholder="Describe your venue, concept, goals, and any specific challenges..."></textarea></div>
+      <div class="q-step" data-step="7"><div class="q-lbl">Step 7 of 9</div><div class="q-q">Your name</div><input type="text" class="q-inp" id="co-name" placeholder="Full name"></div>
+      <div class="q-step" data-step="8"><div class="q-lbl">Step 8 of 9</div><div class="q-q">Your email address</div><input type="email" class="q-inp" id="co-email" placeholder="your@email.com"></div>
+      <div class="q-step" data-step="9"><div class="q-lbl">Step 9 of 9</div><div class="q-q">Company or venue name</div><input type="text" class="q-inp" id="co-company" placeholder="Company or venue name (optional)"></div>
+      <div class="q-ty" id="q-consultancy-ty"><h3>Thank you!</h3><p>Your brief has been sent to drinksdesigners@gmail.com. We'll be in touch within 24 hours to discuss your project.</p></div>
     </div>
     <div class="q-foot"><div class="q-cnt" id="q-consultancy-cnt">1 / 9</div><div class="q-btns"><button class="q-bk" id="q-consultancy-bk" style="visibility:hidden" onclick="qBack('consultancy',9)">Back</button><button class="q-nx" id="q-consultancy-nx" onclick="qNext('consultancy',9)">Next &#8250;</button></div></div>
   </div>
 </div>
 
 <script>
-// Nav scroll
+// ── NAV ──────────────────────────────────────────
 window.addEventListener('scroll',()=>{document.getElementById('mainNav').classList.toggle('scrolled',scrollY>40)})
-
-// Mobile menu
 function toggleMenu(){var m=document.getElementById('mMenu');m.style.display=m.style.display==='block'?'none':'block'}
 
-// Service panel switching
+// ── SERVICE PANELS ────────────────────────────────
 function switchPanel(id,btn){
   document.querySelectorAll('.svc-panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.svc-tab-link').forEach(b=>b.classList.remove('active'));
@@ -882,35 +873,52 @@ function switchSvc(id,btn){
   btn.classList.add('active');
 }
 
-// Video play/pause
-var videoPlaying=false;
-function toggleVideo(){
-  var v=document.getElementById('showcaseVideo');
-  var overlay=document.getElementById('showcasePlay');
-  var icon=document.getElementById('playIcon');
-  if(videoPlaying){
-    v.pause();
-    overlay.style.opacity='1';
-    icon.setAttribute('d','M5,3 19,12 5,21');
-    videoPlaying=false;
+// ── FULLSCREEN VIDEO ──────────────────────────────
+var vfPlaying=false,vfMuted=true;
+var vfEl=document.getElementById('vfVideo');
+var vfSec=document.getElementById('video-feature');
+var vfOverlay=document.getElementById('vfOverlay');
+function toggleVF(){
+  if(vfPlaying){
+    vfEl.pause();
+    vfSec.classList.remove('playing');
+    vfPlaying=false;
   } else {
-    v.play();
-    overlay.style.opacity='0';
-    overlay.style.pointerEvents='none';
-    setTimeout(function(){overlay.style.pointerEvents='auto'},300);
-    videoPlaying=true;
+    vfEl.muted=true;
+    vfEl.play().then(function(){
+      vfSec.classList.add('playing');
+      vfPlaying=true;
+      vfMuted=true;
+    }).catch(function(){});
   }
 }
-document.getElementById('showcaseVideo').addEventListener('ended',function(){
-  videoPlaying=false;
-  document.getElementById('showcasePlay').style.opacity='1';
-});
-document.getElementById('showcaseVideo').addEventListener('click',function(){
-  toggleVideo();
-});
+function toggleMute(e){
+  e.stopPropagation();
+  vfMuted=!vfMuted;
+  vfEl.muted=vfMuted;
+  var icon=document.getElementById('vfMuteIcon');
+  if(vfMuted){
+    icon.innerHTML='<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>';
+  } else {
+    icon.innerHTML='<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>';
+  }
+}
+vfEl.addEventListener('ended',function(){vfSec.classList.remove('playing');vfPlaying=false});
 
-// Quote modals
-var qS={}
+// ── CONTACT FORM → MAILTO ─────────────────────────
+// No database needed — opens user's email client with all fields pre-filled
+function submitContact(e){
+  e.preventDefault();
+  var f=e.target;
+  var body='Name: '+f.name.value+'\nEmail: '+f.email.value+'\nPhone: '+(f.phone.value||'Not provided')+'\nService: '+(f.service.value||'Not specified')+'\n\nMessage:\n'+f.message.value;
+  var mailto='mailto:drinksdesigners@gmail.com?subject='+encodeURIComponent('Website Enquiry — '+f.service.value+' — '+f.name.value)+'&body='+encodeURIComponent(body);
+  window.location.href=mailto;
+  f.reset();
+}
+
+// ── QUOTE MODALS → MAILTO on submit ──────────────
+// All answers collected from DOM, opens mailto on final Submit
+var qS={};
 function openQ(t){qS[t]=1;document.getElementById('q-'+t+'-bd').classList.add('open');document.body.style.overflow='hidden';renderQ(t)}
 function closeQ(t){document.getElementById('q-'+t+'-bd').classList.remove('open');document.body.style.overflow=''}
 function renderQ(t){
@@ -923,10 +931,37 @@ function renderQ(t){
   document.getElementById('q-'+t+'-nx').textContent=s<tot?'Next \u203a':'Submit \u203a';
   body.scrollTop=0;
 }
+function collectAnswers(t){
+  var body=document.getElementById('q-'+t+'-body');
+  var lines=[];
+  body.querySelectorAll('.q-step').forEach(function(step){
+    var lbl=step.querySelector('.q-lbl');
+    var q=step.querySelector('.q-q');
+    if(!lbl||!q)return;
+    var stepLabel=lbl.textContent.trim();
+    var question=q.textContent.trim();
+    // selected options
+    var selOpts=[];
+    step.querySelectorAll('.q-opt.sel .q-ol').forEach(function(ol){selOpts.push(ol.textContent.trim())});
+    // text inputs / textareas
+    var inp=step.querySelector('.q-inp');
+    var val='';
+    if(inp)val=inp.value.trim();
+    var answer=selOpts.length?selOpts.join(', '):val;
+    if(answer)lines.push(question+'\n'+answer);
+  });
+  return lines.join('\n\n');
+}
 function qNext(t,tot){
   var s=qS[t]||1;
   if(s<tot){qS[t]=s+1;renderQ(t)}
   else{
+    // Build email body from all answers
+    var answers=collectAnswers(t);
+    var subject=t==='event'?'Event Bar Catering Enquiry':'Bar Consultancy Brief';
+    var mailto='mailto:drinksdesigners@gmail.com?subject='+encodeURIComponent('Website — '+subject)+'&body='+encodeURIComponent('Hello Drinks Designers,\n\nA new enquiry has been submitted via the website.\n\n---\n\n'+answers+'\n\n---\n\nSent from drinksdesigners.com');
+    window.location.href=mailto;
+    // Show thank you
     document.getElementById('q-'+t+'-body').querySelectorAll('.q-step').forEach(el=>el.classList.remove('active'));
     document.getElementById('q-'+t+'-ty').classList.add('active');
     document.getElementById('q-'+t+'-nx').style.display='none';
